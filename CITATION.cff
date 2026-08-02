@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this repository in your research, please cite it as below. See also the paper 'Asymmetric Input Format Sensitivity in LLM-Based VNF Placement'."
+title: "VNF LLM Sensitivity: Input Format Sensitivity in LLM-Based VNF Placement"
+abstract: >-
+  Experiments studying how the input representation format (edge list, adjacency matrix,
+  natural language, JSON, ranked neighbor) affects Large Language Model reasoning on
+  Virtual Network Function (VNF) placement, comparing GPT and DeepSeek against ILP-optimal
+  solutions and greedy/random baselines.
+authors:
+  - family-names: Siddique
+    given-names: Abu Bakar
+    orcid: "https://orcid.org/0009-0001-2138-0802"
+  - family-names: Lis
+    given-names: Cang
+  - family-names: Bayarkhuu
+    given-names: Odgarig
+  - family-names: Arafat
+    given-names: Yeasin
+keywords:
+  - large language models
+  - virtual network function placement
+  - input representation sensitivity
+  - prompt engineering
+  - network function virtualization
+license: MIT
+date-released: "2026-08-03"

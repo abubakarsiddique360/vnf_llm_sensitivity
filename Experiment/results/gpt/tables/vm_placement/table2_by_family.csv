@@ -1,0 +1,16 @@
+format,family,feasible_rate,count
+F1,barabasi_albert,100.0%,4
+F1,erdos_renyi,71.4%,7
+F1,waxman,33.3%,9
+F2,barabasi_albert,50.0%,4
+F2,erdos_renyi,28.6%,7
+F2,waxman,33.3%,9
+F3,barabasi_albert,75.0%,4
+F3,erdos_renyi,71.4%,7
+F3,waxman,22.2%,9
+F4,barabasi_albert,0.0%,4
+F4,erdos_renyi,85.7%,7
+F4,waxman,33.3%,9
+F5,barabasi_albert,75.0%,4
+F5,erdos_renyi,85.7%,7
+F5,waxman,22.2%,9

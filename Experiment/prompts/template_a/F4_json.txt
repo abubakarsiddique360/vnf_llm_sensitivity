@@ -1,0 +1,9 @@
+{json_serialization}
+
+VNF chain and demand:
+Chain order: {vnf_chain_string}
+Source node: {source_node}
+Destination node: {destination_node}
+Bandwidth demand: {bandwidth}
+
+Important: Each VNF must be placed on a distinct node. The path must go source -> node(f1) -> node(f2) -> ... -> destination. Respect all node CPU and link bandwidth capacities.

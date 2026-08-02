@@ -1,0 +1,3 @@
+@echo off
+echo Starting large_graphs experiment...
+start "DeepSeekExp" cmd /k "cd /d E:\vnf_llm_sensitivity\Experiment && python src\04b_query_deepseek.py --experiment large_graphs --concurrent 3"

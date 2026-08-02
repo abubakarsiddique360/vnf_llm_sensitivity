@@ -1,0 +1,17 @@
+Network topology data:
+{natural_language_serialization}
+
+Service chain requirements:
+- VNF order: {vnf_chain_string}
+- Traffic source: {source_node}
+- Traffic destination: {destination_node}
+- Bandwidth requirement: {bandwidth}
+
+Placement rules:
+1. Place each VNF on a different server
+2. The path must visit VNFs in order
+3. Do not exceed CPU or bandwidth capacities
+4. Minimize total cost
+
+JSON output format:
+{"placement": {"f1": "node_id", ...}, "path": [["node","node"], ...]}

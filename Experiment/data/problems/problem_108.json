@@ -1,0 +1,773 @@
+{
+  "problem_id": 108,
+  "seed": 108042,
+  "family": "barabasi_albert",
+  "size_category": "large",
+  "num_nodes": 41,
+  "num_edges": 114,
+  "graph": {
+    "nodes": [
+      {
+        "id": "v0",
+        "cpu_capacity": 80
+      },
+      {
+        "id": "v1",
+        "cpu_capacity": 80
+      },
+      {
+        "id": "v2",
+        "cpu_capacity": 63
+      },
+      {
+        "id": "v3",
+        "cpu_capacity": 65
+      },
+      {
+        "id": "v4",
+        "cpu_capacity": 88
+      },
+      {
+        "id": "v5",
+        "cpu_capacity": 76
+      },
+      {
+        "id": "v6",
+        "cpu_capacity": 63
+      },
+      {
+        "id": "v7",
+        "cpu_capacity": 86
+      },
+      {
+        "id": "v8",
+        "cpu_capacity": 96
+      },
+      {
+        "id": "v9",
+        "cpu_capacity": 81
+      },
+      {
+        "id": "v10",
+        "cpu_capacity": 56
+      },
+      {
+        "id": "v11",
+        "cpu_capacity": 79
+      },
+      {
+        "id": "v12",
+        "cpu_capacity": 72
+      },
+      {
+        "id": "v13",
+        "cpu_capacity": 93
+      },
+      {
+        "id": "v14",
+        "cpu_capacity": 72
+      },
+      {
+        "id": "v15",
+        "cpu_capacity": 99
+      },
+      {
+        "id": "v16",
+        "cpu_capacity": 82
+      },
+      {
+        "id": "v17",
+        "cpu_capacity": 94
+      },
+      {
+        "id": "v18",
+        "cpu_capacity": 67
+      },
+      {
+        "id": "v19",
+        "cpu_capacity": 87
+      },
+      {
+        "id": "v20",
+        "cpu_capacity": 50
+      },
+      {
+        "id": "v21",
+        "cpu_capacity": 91
+      },
+      {
+        "id": "v22",
+        "cpu_capacity": 50
+      },
+      {
+        "id": "v23",
+        "cpu_capacity": 74
+      },
+      {
+        "id": "v24",
+        "cpu_capacity": 66
+      },
+      {
+        "id": "v25",
+        "cpu_capacity": 55
+      },
+      {
+        "id": "v26",
+        "cpu_capacity": 68
+      },
+      {
+        "id": "v27",
+        "cpu_capacity": 63
+      },
+      {
+        "id": "v28",
+        "cpu_capacity": 80
+      },
+      {
+        "id": "v29",
+        "cpu_capacity": 66
+      },
+      {
+        "id": "v30",
+        "cpu_capacity": 90
+      },
+      {
+        "id": "v31",
+        "cpu_capacity": 81
+      },
+      {
+        "id": "v32",
+        "cpu_capacity": 73
+      },
+      {
+        "id": "v33",
+        "cpu_capacity": 99
+      },
+      {
+        "id": "v34",
+        "cpu_capacity": 77
+      },
+      {
+        "id": "v35",
+        "cpu_capacity": 98
+      },
+      {
+        "id": "v36",
+        "cpu_capacity": 79
+      },
+      {
+        "id": "v37",
+        "cpu_capacity": 52
+      },
+      {
+        "id": "v38",
+        "cpu_capacity": 93
+      },
+      {
+        "id": "v39",
+        "cpu_capacity": 65
+      },
+      {
+        "id": "v40",
+        "cpu_capacity": 68
+      }
+    ],
+    "edges": [
+      {
+        "source": "v0",
+        "target": "v1",
+        "bandwidth_capacity": 194
+      },
+      {
+        "source": "v0",
+        "target": "v2",
+        "bandwidth_capacity": 122
+      },
+      {
+        "source": "v0",
+        "target": "v3",
+        "bandwidth_capacity": 141
+      },
+      {
+        "source": "v0",
+        "target": "v4",
+        "bandwidth_capacity": 195
+      },
+      {
+        "source": "v0",
+        "target": "v5",
+        "bandwidth_capacity": 166
+      },
+      {
+        "source": "v0",
+        "target": "v9",
+        "bandwidth_capacity": 106
+      },
+      {
+        "source": "v0",
+        "target": "v13",
+        "bandwidth_capacity": 172
+      },
+      {
+        "source": "v0",
+        "target": "v15",
+        "bandwidth_capacity": 115
+      },
+      {
+        "source": "v0",
+        "target": "v16",
+        "bandwidth_capacity": 102
+      },
+      {
+        "source": "v0",
+        "target": "v18",
+        "bandwidth_capacity": 142
+      },
+      {
+        "source": "v0",
+        "target": "v21",
+        "bandwidth_capacity": 104
+      },
+      {
+        "source": "v0",
+        "target": "v23",
+        "bandwidth_capacity": 170
+      },
+      {
+        "source": "v0",
+        "target": "v24",
+        "bandwidth_capacity": 194
+      },
+      {
+        "source": "v0",
+        "target": "v30",
+        "bandwidth_capacity": 119
+      },
+      {
+        "source": "v1",
+        "target": "v4",
+        "bandwidth_capacity": 102
+      },
+      {
+        "source": "v1",
+        "target": "v5",
+        "bandwidth_capacity": 117
+      },
+      {
+        "source": "v1",
+        "target": "v6",
+        "bandwidth_capacity": 120
+      },
+      {
+        "source": "v1",
+        "target": "v8",
+        "bandwidth_capacity": 124
+      },
+      {
+        "source": "v1",
+        "target": "v10",
+        "bandwidth_capacity": 195
+      },
+      {
+        "source": "v1",
+        "target": "v16",
+        "bandwidth_capacity": 149
+      },
+      {
+        "source": "v1",
+        "target": "v22",
+        "bandwidth_capacity": 148
+      },
+      {
+        "source": "v1",
+        "target": "v38",
+        "bandwidth_capacity": 156
+      },
+      {
+        "source": "v1",
+        "target": "v40",
+        "bandwidth_capacity": 186
+      },
+      {
+        "source": "v2",
+        "target": "v4",
+        "bandwidth_capacity": 186
+      },
+      {
+        "source": "v2",
+        "target": "v8",
+        "bandwidth_capacity": 125
+      },
+      {
+        "source": "v2",
+        "target": "v11",
+        "bandwidth_capacity": 115
+      },
+      {
+        "source": "v2",
+        "target": "v12",
+        "bandwidth_capacity": 106
+      },
+      {
+        "source": "v2",
+        "target": "v14",
+        "bandwidth_capacity": 106
+      },
+      {
+        "source": "v2",
+        "target": "v15",
+        "bandwidth_capacity": 192
+      },
+      {
+        "source": "v2",
+        "target": "v17",
+        "bandwidth_capacity": 136
+      },
+      {
+        "source": "v2",
+        "target": "v19",
+        "bandwidth_capacity": 107
+      },
+      {
+        "source": "v2",
+        "target": "v22",
+        "bandwidth_capacity": 200
+      },
+      {
+        "source": "v2",
+        "target": "v26",
+        "bandwidth_capacity": 104
+      },
+      {
+        "source": "v2",
+        "target": "v27",
+        "bandwidth_capacity": 111
+      },
+      {
+        "source": "v2",
+        "target": "v28",
+        "bandwidth_capacity": 110
+      },
+      {
+        "source": "v2",
+        "target": "v30",
+        "bandwidth_capacity": 100
+      },
+      {
+        "source": "v2",
+        "target": "v32",
+        "bandwidth_capacity": 112
+      },
+      {
+        "source": "v2",
+        "target": "v35",
+        "bandwidth_capacity": 105
+      },
+      {
+        "source": "v2",
+        "target": "v36",
+        "bandwidth_capacity": 158
+      },
+      {
+        "source": "v2",
+        "target": "v39",
+        "bandwidth_capacity": 132
+      },
+      {
+        "source": "v3",
+        "target": "v10",
+        "bandwidth_capacity": 188
+      },
+      {
+        "source": "v3",
+        "target": "v13",
+        "bandwidth_capacity": 177
+      },
+      {
+        "source": "v3",
+        "target": "v24",
+        "bandwidth_capacity": 199
+      },
+      {
+        "source": "v4",
+        "target": "v5",
+        "bandwidth_capacity": 153
+      },
+      {
+        "source": "v4",
+        "target": "v6",
+        "bandwidth_capacity": 147
+      },
+      {
+        "source": "v4",
+        "target": "v7",
+        "bandwidth_capacity": 125
+      },
+      {
+        "source": "v4",
+        "target": "v9",
+        "bandwidth_capacity": 115
+      },
+      {
+        "source": "v4",
+        "target": "v14",
+        "bandwidth_capacity": 102
+      },
+      {
+        "source": "v4",
+        "target": "v17",
+        "bandwidth_capacity": 113
+      },
+      {
+        "source": "v4",
+        "target": "v18",
+        "bandwidth_capacity": 180
+      },
+      {
+        "source": "v4",
+        "target": "v23",
+        "bandwidth_capacity": 133
+      },
+      {
+        "source": "v4",
+        "target": "v28",
+        "bandwidth_capacity": 173
+      },
+      {
+        "source": "v4",
+        "target": "v35",
+        "bandwidth_capacity": 143
+      },
+      {
+        "source": "v4",
+        "target": "v36",
+        "bandwidth_capacity": 162
+      },
+      {
+        "source": "v4",
+        "target": "v37",
+        "bandwidth_capacity": 133
+      },
+      {
+        "source": "v4",
+        "target": "v40",
+        "bandwidth_capacity": 183
+      },
+      {
+        "source": "v5",
+        "target": "v6",
+        "bandwidth_capacity": 102
+      },
+      {
+        "source": "v5",
+        "target": "v7",
+        "bandwidth_capacity": 174
+      },
+      {
+        "source": "v5",
+        "target": "v9",
+        "bandwidth_capacity": 170
+      },
+      {
+        "source": "v5",
+        "target": "v10",
+        "bandwidth_capacity": 110
+      },
+      {
+        "source": "v5",
+        "target": "v16",
+        "bandwidth_capacity": 127
+      },
+      {
+        "source": "v5",
+        "target": "v18",
+        "bandwidth_capacity": 100
+      },
+      {
+        "source": "v5",
+        "target": "v20",
+        "bandwidth_capacity": 187
+      },
+      {
+        "source": "v5",
+        "target": "v21",
+        "bandwidth_capacity": 160
+      },
+      {
+        "source": "v5",
+        "target": "v29",
+        "bandwidth_capacity": 177
+      },
+      {
+        "source": "v5",
+        "target": "v33",
+        "bandwidth_capacity": 169
+      },
+      {
+        "source": "v5",
+        "target": "v40",
+        "bandwidth_capacity": 141
+      },
+      {
+        "source": "v6",
+        "target": "v7",
+        "bandwidth_capacity": 135
+      },
+      {
+        "source": "v6",
+        "target": "v8",
+        "bandwidth_capacity": 166
+      },
+      {
+        "source": "v6",
+        "target": "v11",
+        "bandwidth_capacity": 149
+      },
+      {
+        "source": "v6",
+        "target": "v14",
+        "bandwidth_capacity": 123
+      },
+      {
+        "source": "v6",
+        "target": "v27",
+        "bandwidth_capacity": 108
+      },
+      {
+        "source": "v7",
+        "target": "v12",
+        "bandwidth_capacity": 195
+      },
+      {
+        "source": "v7",
+        "target": "v13",
+        "bandwidth_capacity": 114
+      },
+      {
+        "source": "v7",
+        "target": "v20",
+        "bandwidth_capacity": 108
+      },
+      {
+        "source": "v7",
+        "target": "v21",
+        "bandwidth_capacity": 155
+      },
+      {
+        "source": "v7",
+        "target": "v33",
+        "bandwidth_capacity": 178
+      },
+      {
+        "source": "v9",
+        "target": "v11",
+        "bandwidth_capacity": 171
+      },
+      {
+        "source": "v9",
+        "target": "v12",
+        "bandwidth_capacity": 170
+      },
+      {
+        "source": "v9",
+        "target": "v15",
+        "bandwidth_capacity": 123
+      },
+      {
+        "source": "v9",
+        "target": "v19",
+        "bandwidth_capacity": 133
+      },
+      {
+        "source": "v9",
+        "target": "v37",
+        "bandwidth_capacity": 137
+      },
+      {
+        "source": "v10",
+        "target": "v32",
+        "bandwidth_capacity": 128
+      },
+      {
+        "source": "v10",
+        "target": "v35",
+        "bandwidth_capacity": 118
+      },
+      {
+        "source": "v11",
+        "target": "v26",
+        "bandwidth_capacity": 137
+      },
+      {
+        "source": "v11",
+        "target": "v34",
+        "bandwidth_capacity": 168
+      },
+      {
+        "source": "v12",
+        "target": "v36",
+        "bandwidth_capacity": 124
+      },
+      {
+        "source": "v13",
+        "target": "v25",
+        "bandwidth_capacity": 107
+      },
+      {
+        "source": "v14",
+        "target": "v17",
+        "bandwidth_capacity": 188
+      },
+      {
+        "source": "v14",
+        "target": "v20",
+        "bandwidth_capacity": 103
+      },
+      {
+        "source": "v14",
+        "target": "v31",
+        "bandwidth_capacity": 199
+      },
+      {
+        "source": "v16",
+        "target": "v31",
+        "bandwidth_capacity": 188
+      },
+      {
+        "source": "v17",
+        "target": "v27",
+        "bandwidth_capacity": 176
+      },
+      {
+        "source": "v18",
+        "target": "v19",
+        "bandwidth_capacity": 122
+      },
+      {
+        "source": "v18",
+        "target": "v26",
+        "bandwidth_capacity": 115
+      },
+      {
+        "source": "v18",
+        "target": "v31",
+        "bandwidth_capacity": 105
+      },
+      {
+        "source": "v19",
+        "target": "v22",
+        "bandwidth_capacity": 153
+      },
+      {
+        "source": "v20",
+        "target": "v25",
+        "bandwidth_capacity": 122
+      },
+      {
+        "source": "v20",
+        "target": "v32",
+        "bandwidth_capacity": 142
+      },
+      {
+        "source": "v20",
+        "target": "v39",
+        "bandwidth_capacity": 125
+      },
+      {
+        "source": "v21",
+        "target": "v33",
+        "bandwidth_capacity": 154
+      },
+      {
+        "source": "v22",
+        "target": "v23",
+        "bandwidth_capacity": 104
+      },
+      {
+        "source": "v22",
+        "target": "v24",
+        "bandwidth_capacity": 121
+      },
+      {
+        "source": "v22",
+        "target": "v25",
+        "bandwidth_capacity": 172
+      },
+      {
+        "source": "v23",
+        "target": "v28",
+        "bandwidth_capacity": 137
+      },
+      {
+        "source": "v25",
+        "target": "v37",
+        "bandwidth_capacity": 172
+      },
+      {
+        "source": "v26",
+        "target": "v29",
+        "bandwidth_capacity": 195
+      },
+      {
+        "source": "v26",
+        "target": "v34",
+        "bandwidth_capacity": 171
+      },
+      {
+        "source": "v27",
+        "target": "v29",
+        "bandwidth_capacity": 199
+      },
+      {
+        "source": "v27",
+        "target": "v34",
+        "bandwidth_capacity": 142
+      },
+      {
+        "source": "v28",
+        "target": "v30",
+        "bandwidth_capacity": 146
+      },
+      {
+        "source": "v28",
+        "target": "v39",
+        "bandwidth_capacity": 197
+      },
+      {
+        "source": "v32",
+        "target": "v38",
+        "bandwidth_capacity": 138
+      },
+      {
+        "source": "v37",
+        "target": "v38",
+        "bandwidth_capacity": 137
+      }
+    ]
+  },
+  "vnf_chain": [
+    {
+      "id": "f1",
+      "cpu_demand": 23
+    },
+    {
+      "id": "f2",
+      "cpu_demand": 10
+    },
+    {
+      "id": "f3",
+      "cpu_demand": 12
+    },
+    {
+      "id": "f4",
+      "cpu_demand": 13
+    },
+    {
+      "id": "f5",
+      "cpu_demand": 14
+    }
+  ],
+  "source": "v36",
+  "destination": "v17",
+  "bandwidth_demand": 50
+}

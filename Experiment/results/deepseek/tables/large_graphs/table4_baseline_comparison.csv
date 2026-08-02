@@ -1,0 +1,6 @@
+format,feasibility_rate,method
+F1,0.6,deepseek-v4-flash
+F2,0.6,deepseek-v4-flash
+F3,0.7333333333333333,deepseek-v4-flash
+F4,0.6666666666666666,deepseek-v4-flash
+F5,0.36666666666666664,deepseek-v4-flash

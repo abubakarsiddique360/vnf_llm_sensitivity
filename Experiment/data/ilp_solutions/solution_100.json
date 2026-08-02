@@ -1,0 +1,45 @@
+{
+  "problem_id": 100,
+  "solver": "cbc_hybrid",
+  "solver_time_seconds": 0,
+  "optimal_cost": 329.0,
+  "optimal": true,
+  "mip_gap": 0.0,
+  "placement": {
+    "f4": "v8",
+    "f2": "v31",
+    "f1": "v38",
+    "f3": "v41"
+  },
+  "path": [
+    [
+      "v32",
+      "v5"
+    ],
+    [
+      "v5",
+      "v38"
+    ],
+    [
+      "v38",
+      "v31"
+    ],
+    [
+      "v31",
+      "v41"
+    ],
+    [
+      "v41",
+      "v1"
+    ],
+    [
+      "v1",
+      "v8"
+    ],
+    [
+      "v8",
+      "v37"
+    ]
+  ],
+  "edge_traversal_counts": {}
+}

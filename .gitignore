@@ -1,0 +1,31 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+
+# Secrets — never commit real API keys
+.env
+.env.*
+!.env.example
+
+# Experiment runtime artifacts (large / regenerable) — the Experiment/.gitignore
+# also protects the raw LLM responses and logs.
+
+# Leftover nested repo folder (duplicate) — exclude from upload.
+# Safe to remove from disk after closing the nested VS Code window:
+#   Remove-Item -Recurse -Force E:\vnf_llm_sensitivity\vnf_llm_sensitivity
+vnf_llm_sensitivity/

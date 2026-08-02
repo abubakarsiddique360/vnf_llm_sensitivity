@@ -1,0 +1,16 @@
+format,size_category,feasible_rate,count
+F1,large,16.7%,18
+F1,medium,25.9%,27
+F1,small,26.7%,15
+F2,large,11.1%,18
+F2,medium,3.7%,27
+F2,small,13.3%,15
+F3,large,5.6%,18
+F3,medium,22.2%,27
+F3,small,20.0%,15
+F4,large,27.8%,18
+F4,medium,25.9%,27
+F4,small,6.7%,15
+F5,large,33.3%,18
+F5,medium,14.8%,27
+F5,small,20.0%,15

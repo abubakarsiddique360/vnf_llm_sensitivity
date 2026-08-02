@@ -1,0 +1,57 @@
+{
+  "problem_id": 7,
+  "solver": "cbc_hybrid",
+  "solver_time_seconds": 0,
+  "optimal_cost": 811.0,
+  "optimal": true,
+  "mip_gap": 0.0,
+  "placement": {
+    "f2": "v0",
+    "f1": "v5",
+    "f3": "v12",
+    "f4": "v14"
+  },
+  "path": [
+    [
+      "v14",
+      "v1"
+    ],
+    [
+      "v1",
+      "v5"
+    ],
+    [
+      "v5",
+      "v9"
+    ],
+    [
+      "v9",
+      "v0"
+    ],
+    [
+      "v0",
+      "v2"
+    ],
+    [
+      "v2",
+      "v12"
+    ],
+    [
+      "v12",
+      "v1"
+    ],
+    [
+      "v1",
+      "v14"
+    ],
+    [
+      "v14",
+      "v0"
+    ],
+    [
+      "v0",
+      "v11"
+    ]
+  ],
+  "edge_traversal_counts": {}
+}

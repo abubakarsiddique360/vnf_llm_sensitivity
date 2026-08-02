@@ -1,0 +1,33 @@
+{
+  "problem_id": 30,
+  "solver": "cbc",
+  "solver_time_seconds": 0.27,
+  "optimal_cost": 317.0,
+  "optimal": true,
+  "mip_gap": 0.0,
+  "placement": {
+    "f2": "v11",
+    "f3": "v12",
+    "f4": "v25",
+    "f1": "v26"
+  },
+  "path": [
+    [
+      "v11",
+      "v12"
+    ],
+    [
+      "v12",
+      "v25"
+    ],
+    [
+      "v25",
+      "v26"
+    ]
+  ],
+  "edge_traversal_counts": {
+    "v11_v12": 1,
+    "v12_v25": 1,
+    "v25_v26": 1
+  }
+}

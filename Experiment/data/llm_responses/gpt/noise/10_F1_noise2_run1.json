@@ -1,0 +1,22 @@
+{
+  "problem_id": 10,
+  "model": "gpt-5-mini",
+  "experiment": "noise",
+  "format": "F1",
+  "run": 1,
+  "temperature": 0.0,
+  "prompt_template": "A",
+  "noise_level": 2,
+  "timestamp": "2026-07-15T15:40:28",
+  "prompt": {
+    "system": "",
+    "user": "Nodes: v0(CPU=73), v1(CPU=90), v20(CPU=74), v3(CPU=65), v4(CPU=73), v5(CPU=76), v6(CPU=90), v7(CPU=69), v8(CPU=64), v9(CPU=82), v10(CPU=87), v11(CPU=56), v12(CPU=96), v13(CPU=61), v202(CPU=82), v15(CPU=60), v19(CPU=90), v17(CPU=52), v18(CPU=80), v16(CPU=78), v2(CPU=60), v201(CPU=89), v14(CPU=90), v203(CPU=80), v204(CPU=92), v205(CPU=54), v206(CPU=81), v207(CPU=71)\nEdges (undirected): (v0,v1,bw=123), (v1,v20,bw=135), (v1,v3,bw=188), (v20,v10,bw=121), (v3,v8,bw=138), (v3,v11,bw=153), (v3,v19,bw=138), (v3,v4,bw=150), (v4,v5,bw=173), (v5,v7,bw=143), (v6,v8,bw=122), (v7,v9,bw=166), (v9,v17,bw=125), (v9,v12,bw=184), (v12,v207,bw=146), (v13,v207,bw=194), (v202,v207,bw=193), (v202,v15,bw=132), (v15,v16,bw=149), (v17,v18,bw=197), (v16,v203,bw=139), (v16,v201,bw=167), (v2,v207,bw=198), (v201,v14,bw=190), (v14,v204,bw=160), (v204,v205,bw=121), (v205,v206,bw=112)\n\nVNF chain and demand:\nChain order: f1(CPU=28), f2(CPU=26), f3(CPU=25), f4(CPU=18)\nSource node: v15\nDestination node: v17\nBandwidth demand: 35\n\nImportant: Each VNF must be placed on a distinct node. The path must go source -> node(f1) -> node(f2) -> ... -> destination. Respect all node CPU and link bandwidth capacities."
+  },
+  "raw_response": "{\"placement\": {\"f1\": \"v202\", \"f2\": \"v207\", \"f3\": \"v12\", \"f4\": \"v9\"}, \"path\": [[\"v15\", \"v202\"], [\"v202\", \"v207\"], [\"v207\", \"v12\"], [\"v12\", \"v9\"], [\"v9\", \"v17\"]]}\n\nReasoning:\n- Chose a simple path from source v15 to destination v17 following available edges: v15 -> v202 -> v207 -> v12 -> v9 -> v17.\n- Placed each VNF on a distinct node along that path in chain order: f1 on v202 (CPU 82 \u2265 28), f2 on v207 (CPU 71 \u2265 26), f3 on v12 (CPU 96 \u2265 25), f4 on v9 (CPU 82 \u2265 18).\n- All traversed links have bandwidth >= 35 (v15-v202:132, v202-v207:193, v207-v12:146, v12-v9:184, v9-v17:125), so bandwidth demand is satisfied.",
+  "token_usage": {
+    "prompt_tokens": 819,
+    "completion_tokens": 824,
+    "total_tokens": 1643
+  },
+  "latency_seconds": 20.23
+}

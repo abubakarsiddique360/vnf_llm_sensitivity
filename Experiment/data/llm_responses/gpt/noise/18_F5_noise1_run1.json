@@ -1,0 +1,22 @@
+{
+  "problem_id": 18,
+  "model": "gpt-5-mini",
+  "experiment": "noise",
+  "format": "F5",
+  "run": 1,
+  "temperature": 0.0,
+  "prompt_template": "A",
+  "noise_level": 1,
+  "timestamp": "2026-07-15T16:25:37",
+  "prompt": {
+    "system": "",
+    "user": "v0 -> (v18,187), (v13,182), (v11,176), (v4,173), (v5,168), (v3,155), (v14,143), (v2,118)\nv1 -> (v18,180), (v9,172), (v4,167), (v6,165), (v5,155), (v2,149), (v11,132), (v12,132), (v10,125), (v16,108)\nv14 -> (v11,180), (v0,143), (v19,114)\nv3 -> (v19,177), (v8,175), (v9,162), (v0,155), (v2,123), (v12,105), (v17,100)\nv4 -> (v19,200), (v13,188), (v0,173), (v1,167), (v2,163), (v9,132), (v10,128), (v7,125), (v18,119), (v6,112)\nv5 -> (v0,168), (v13,168), (v12,160), (v1,155), (v9,127), (v11,122), (v19,118)\nv6 -> (v13,191), (v15,169), (v1,165), (v2,158), (v19,117), (v4,112)\nv7 -> (v13,194), (v9,190), (v18,166), (v11,149), (v4,125), (v2,120)\nv8 -> (v3,175), (v18,159), (v13,116)\nv9 -> (v17,199), (v7,190), (v1,172), (v19,168), (v3,162), (v15,152), (v16,134), (v4,132), (v5,127), (v10,118), (v11,116), (v12,109)\nv10 -> (v18,200), (v17,192), (v19,192), (v13,181), (v12,175), (v4,128), (v1,125), (v9,118)\nv11 -> (v19,192), (v14,180), (v0,176), (v7,149), (v1,132), (v5,122), (v9,116), (v16,111), (v18,108), (v12,107)\nv12 -> (v18,190), (v10,175), (v16,165), (v5,160), (v1,132), (v9,109), (v11,107), (v3,105)\nv13 -> (v7,194), (v6,191), (v4,188), (v17,186), (v0,182), (v10,181), (v5,168), (v15,151), (v8,116)\nv2 -> (v17,171), (v4,163), (v6,158), (v1,149), (v3,123), (v7,120), (v0,118)\nv15 -> (v17,197), (v6,169), (v19,164), (v9,152), (v13,151), (v18,131)\nv16 -> (v12,165), (v9,134), (v18,129), (v11,111), (v1,108)\nv17 -> (v9,199), (v15,197), (v10,192), (v13,186), (v2,171), (v18,153), (v19,127), (v3,100)\nv18 -> (v10,200), (v12,190), (v0,187), (v1,180), (v7,166), (v8,159), (v17,153), (v15,131), (v16,129), (v4,119), (v11,108)\nv19 -> (v4,200), (v10,192), (v11,192), (v3,177), (v9,168), (v15,164), (v17,127), (v5,118), (v6,117), (v14,114)\nNode capacities: v0:81, v1:60, v14:61, v3:74, v4:56, v5:74, v6:91, v7:65, v8:98, v9:88, v10:91, v11:92, v12:87, v13:72, v2:94, v15:58, v16:85, v17:58, v18:56, v19:75\n\nVNF chain and demand:\nChain order: f1(CPU=18), f2(CPU=18), f3(CPU=29), f4(CPU=10)\nSource node: v14\nDestination node: v0\nBandwidth demand: 70\n\nImportant: Each VNF must be placed on a distinct node. The path must go source -> node(f1) -> node(f2) -> ... -> destination. Respect all node CPU and link bandwidth capacities."
+  },
+  "raw_response": "{\"placement\": {\"f1\": \"v11\", \"f2\": \"v9\", \"f3\": \"v17\", \"f4\": \"v13\"}, \"path\": [[\"source\", \"v11\"], [\"v11\", \"v9\"], [\"v9\", \"v17\"], [\"v17\", \"v13\"], [\"v13\", \"destination\"]]}\nPlacement reasoning:\n\n- Source = v14, Destination = v0. Chosen chain nodes (all distinct) and their CPU capacities:\n  - f1 -> v11 (CPU 92 \u2265 18)\n  - f2 -> v9  (CPU 88 \u2265 18)\n  - f3 -> v17 (CPU 58 \u2265 29)\n  - f4 -> v13 (CPU 72 \u2265 10)\n\n- Path hops and link bandwidths (all \u2265 required 70):\n  - v14 -> v11 : 180\n  - v11 -> v9  : 116\n  - v9  -> v17 : 199\n  - v17 -> v13 : 186\n  - v13 -> v0  : 182\n\nAll node CPU constraints and every link bandwidth along the chain satisfy the 70 bandwidth demand.",
+  "token_usage": {
+    "prompt_tokens": 1433,
+    "completion_tokens": 2056,
+    "total_tokens": 3489
+  },
+  "latency_seconds": 42.52
+}

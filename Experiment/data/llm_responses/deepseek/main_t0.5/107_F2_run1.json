@@ -1,0 +1,22 @@
+{
+  "problem_id": 107,
+  "model": "deepseek-v4-flash",
+  "experiment": "main_t0.5",
+  "format": "F2",
+  "run": 1,
+  "temperature": 0.5,
+  "prompt_template": "A",
+  "noise_level": 0,
+  "timestamp": "2026-07-13T05:38:27",
+  "prompt": {
+    "system": "",
+    "user": "Adjacency matrix (sparse, 50 edges):\nv0 -> v9: bw=122; v0 -> v20: bw=105; v0 -> v27: bw=105; v0 -> v47: bw=149; v0 -> v8: bw=114; v1 -> v37: bw=193; v2 -> v23: bw=154; v3 -> v41: bw=168; v3 -> v46: bw=189; v3 -> v47: bw=136; v4 -> v6: bw=100; v4 -> v16: bw=113; v4 -> v42: bw=173; v5 -> v10: bw=196; v5 -> v15: bw=119; v5 -> v40: bw=103; v7 -> v39: bw=100; v7 -> v48: bw=109; v8 -> v11: bw=151; v10 -> v48: bw=140; v11 -> v12: bw=136; v12 -> v44: bw=136; v13 -> v44: bw=117; v14 -> v35: bw=140; v15 -> v22: bw=100; v15 -> v24: bw=116; v17 -> v39: bw=200; v18 -> v32: bw=128; v18 -> v38: bw=124; v19 -> v26: bw=185; v19 -> v28: bw=189; v20 -> v21: bw=189; v21 -> v25: bw=151; v21 -> v45: bw=149; v22 -> v24: bw=187; v23 -> v43: bw=113; v24 -> v45: bw=168; v25 -> v38: bw=164; v26 -> v35: bw=149; v26 -> v44: bw=175; v28 -> v29: bw=197; v28 -> v30: bw=174; v30 -> v31: bw=104; v31 -> v33: bw=165; v33 -> v36: bw=194; v34 -> v45: bw=135; v37 -> v38: bw=116; v38 -> v42: bw=140; v38 -> v43: bw=108; v43 -> v49: bw=183\n\nNode capacities: v0:79, v1:69, v2:88, v3:53, v4:50, v5:60, v6:67, v7:67, v8:74, v9:70, v10:60, v11:95, v12:100, v13:53, v14:58, v15:74, v16:63, v17:65, v18:55, v19:96, v20:74, v21:94, v22:66, v23:73, v24:80, v25:86, v26:81, v27:73, v28:93, v29:65, v30:71, v31:64, v32:66, v33:91, v34:55, v35:53, v36:67, v37:74, v38:50, v39:77, v40:72, v41:83, v42:84, v43:83, v44:53, v45:76, v46:91, v47:56, v48:52, v49:55\n\nVNF chain and demand:\nChain order: f1(CPU=13), f2(CPU=11), f3(CPU=12), f4(CPU=26), f5(CPU=16), f6(CPU=24), f7(CPU=21), f8(CPU=30)\nSource node: v20\nDestination node: v31\nBandwidth demand: 20\n\nImportant: Each VNF must be placed on a distinct node. The path must go source -> node(f1) -> node(f2) -> ... -> destination. Respect all node CPU and link bandwidth capacities."
+  },
+  "raw_response": "{\"placement\": {\"f1\": \"v0\", \"f2\": \"v8\", \"f3\": \"v11\", \"f4\": \"v12\", \"f5\": \"v26\", \"f6\": \"v19\", \"f7\": \"v28\", \"f8\": \"v30\"}, \"path\": [[\"v20\", \"v0\"], [\"v0\", \"v8\"], [\"v8\", \"v11\"], [\"v11\", \"v12\"], [\"v12\", \"v44\"], [\"v44\", \"v26\"], [\"v26\", \"v19\"], [\"v19\", \"v28\"], [\"v28\", \"v30\"], [\"v30\", \"v31\"]]}",
+  "token_usage": {
+    "prompt_tokens": 1210,
+    "completion_tokens": 13359,
+    "total_tokens": 14569
+  },
+  "latency_seconds": 118.47
+}

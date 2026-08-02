@@ -1,0 +1,22 @@
+{
+  "problem_id": 94,
+  "model": "deepseek-v4-flash",
+  "experiment": "main_t0.5",
+  "format": "F3",
+  "run": 1,
+  "temperature": 0.5,
+  "prompt_template": "A",
+  "noise_level": 0,
+  "timestamp": "2026-07-13T05:10:09",
+  "prompt": {
+    "system": "",
+    "user": "We have a network with 15 nodes. Node v0 has a CPU capacity of 74 units. Node v1 has a CPU capacity of 98 units. Node v2 has a CPU capacity of 87 units. Node v3 has a CPU capacity of 95 units. Node v4 has a CPU capacity of 100 units. Node v5 has a CPU capacity of 82 units. Node v6 has a CPU capacity of 58 units. Node v7 has a CPU capacity of 70 units. Node v8 has a CPU capacity of 72 units. Node v9 has a CPU capacity of 99 units. Node v10 has a CPU capacity of 87 units. Node v11 has a CPU capacity of 52 units. Node v12 has a CPU capacity of 53 units. Node v13 has a CPU capacity of 66 units. Node v14 has a CPU capacity of 54 units. The link between v0 and v1 can carry up to 184 units of bandwidth. The link between v1 and v3 can carry up to 136 units of bandwidth. The link between v1 and v5 can carry up to 195 units of bandwidth. The link between v1 and v2 can carry up to 158 units of bandwidth. The link between v2 and v4 can carry up to 141 units of bandwidth. The link between v4 and v6 can carry up to 165 units of bandwidth. The link between v6 and v7 can carry up to 174 units of bandwidth. The link between v7 and v8 can carry up to 109 units of bandwidth. The link between v8 and v9 can carry up to 198 units of bandwidth. The link between v9 and v10 can carry up to 107 units of bandwidth. The link between v10 and v11 can carry up to 123 units of bandwidth. The link between v11 and v12 can carry up to 166 units of bandwidth. The link between v12 and v13 can carry up to 149 units of bandwidth. The link between v13 and v14 can carry up to 181 units of bandwidth.\n\nVNF chain and demand:\nChain order: f1(CPU=19), f2(CPU=15), f3(CPU=24), f4(CPU=19), f5(CPU=29), f6(CPU=23)\nSource node: v3\nDestination node: v6\nBandwidth demand: 27\n\nImportant: Each VNF must be placed on a distinct node. The path must go source -> node(f1) -> node(f2) -> ... -> destination. Respect all node CPU and link bandwidth capacities."
+  },
+  "raw_response": "{\"placement\": {\"f1\": \"v1\", \"f2\": \"v2\", \"f3\": \"v4\", \"f4\": \"v7\", \"f5\": \"v8\", \"f6\": \"v9\"}, \"path\": [[\"v3\", \"v1\"], [\"v1\", \"v2\"], [\"v2\", \"v4\"], [\"v4\", \"v6\"], [\"v6\", \"v7\"], [\"v7\", \"v8\"], [\"v8\", \"v9\"], [\"v9\", \"v8\"], [\"v8\", \"v7\"], [\"v7\", \"v6\"]]}",
+  "token_usage": {
+    "prompt_tokens": 873,
+    "completion_tokens": 6656,
+    "total_tokens": 7529
+  },
+  "latency_seconds": 54.59
+}

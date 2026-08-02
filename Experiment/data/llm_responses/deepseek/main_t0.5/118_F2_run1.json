@@ -1,0 +1,22 @@
+{
+  "problem_id": 118,
+  "model": "deepseek-v4-flash",
+  "experiment": "main_t0.5",
+  "format": "F2",
+  "run": 1,
+  "temperature": 0.5,
+  "prompt_template": "A",
+  "noise_level": 0,
+  "timestamp": "2026-07-13T05:57:52",
+  "prompt": {
+    "system": "",
+    "user": "Node order: v0, v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15\nAdjacency matrix (row=source, col=target, value=bandwidth):\n         v0     v1     v2     v3     v4     v5     v6     v7     v8     v9    v10    v11    v12    v13    v14    v15\n  v0      0      0    100    188      0    150    171      0    172      0      0      0      0    134      0    169\n  v1      0      0      0      0      0      0    175      0      0      0    192      0      0      0      0      0\n  v2    100      0      0    137      0    177      0      0      0      0      0    187    159      0      0    164\n  v3    188      0    137      0      0      0      0      0      0    101      0      0    166    169    150    190\n  v4      0      0      0      0      0    129    138      0      0      0      0      0      0      0      0      0\n  v5    150      0    177      0    129      0      0      0      0      0    184    150      0    138      0      0\n  v6    171    175      0      0    138      0      0    177    168      0    142      0      0      0      0    169\n  v7      0      0      0      0      0      0    177      0      0      0      0    110      0      0      0    105\n  v8    172      0      0      0      0      0    168      0      0      0    169    197    122    131      0      0\n  v9      0      0      0    101      0      0      0      0      0      0      0      0      0      0      0      0\n v10      0    192      0      0      0    184    142      0    169      0      0      0      0    132    187      0\n v11      0      0    187      0      0    150      0    110    197      0      0      0    145    186    190    116\n v12      0      0    159    166      0      0      0      0    122      0      0    145      0      0      0      0\n v13    134      0      0    169      0    138      0      0    131      0    132    186      0      0      0      0\n v14      0      0      0    150      0      0      0      0      0      0    187    190      0      0      0      0\n v15    169      0    164    190      0      0    169    105      0      0      0    116      0      0      0      0\n\nNode capacities: v0:78, v1:89, v2:69, v3:78, v4:69, v5:74, v6:80, v7:55, v8:54, v9:73, v10:71, v11:76, v12:88, v13:88, v14:64, v15:66\n\nVNF chain and demand:\nChain order: f1(CPU=13), f2(CPU=24), f3(CPU=17), f4(CPU=16), f5(CPU=14), f6(CPU=17), f7(CPU=28), f8(CPU=22)\nSource node: v0\nDestination node: v7\nBandwidth demand: 61\n\nImportant: Each VNF must be placed on a distinct node. The path must go source -> node(f1) -> node(f2) -> ... -> destination. Respect all node CPU and link bandwidth capacities."
+  },
+  "raw_response": "{\"placement\": {\"f1\": \"v6\", \"f2\": \"v1\", \"f3\": \"v10\", \"f4\": \"v5\", \"f5\": \"v2\", \"f6\": \"v3\", \"f7\": \"v14\", \"f8\": \"v11\"}, \"path\": [[\"source\", \"v6\"], [\"v6\", \"v1\"], [\"v1\", \"v10\"], [\"v10\", \"v5\"], [\"v5\", \"v2\"], [\"v2\", \"v3\"], [\"v3\", \"v14\"], [\"v14\", \"v11\"], [\"v11\", \"destination\"]]}",
+  "token_usage": {
+    "prompt_tokens": 1216,
+    "completion_tokens": 4482,
+    "total_tokens": 5698
+  },
+  "latency_seconds": 40.33
+}

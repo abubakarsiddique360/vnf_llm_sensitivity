@@ -1,0 +1,22 @@
+{
+  "problem_id": 20,
+  "model": "gpt-5-mini",
+  "experiment": "noise",
+  "format": "F1",
+  "run": 1,
+  "temperature": 0.0,
+  "prompt_template": "A",
+  "noise_level": 1,
+  "timestamp": "2026-07-15T16:30:14",
+  "prompt": {
+    "system": "",
+    "user": "Nodes: v0(CPU=50), v3(CPU=93), v2(CPU=77), v1(CPU=74), v4(CPU=50), v5(CPU=76), v6(CPU=98), v7(CPU=82), v8(CPU=51), v9(CPU=95), v30(CPU=54), v31(CPU=73), v32(CPU=90), v33(CPU=69), v34(CPU=82), v35(CPU=60)\nEdges (undirected): (v0,v3,bw=155), (v0,v1,bw=113), (v0,v5,bw=136), (v0,v6,bw=171), (v0,v8,bw=168), (v0,v9,bw=145), (v0,v30,bw=125), (v0,v32,bw=195), (v0,v34,bw=119), (v0,v35,bw=139), (v3,v2,bw=101), (v3,v4,bw=127), (v3,v5,bw=129), (v3,v6,bw=173), (v3,v7,bw=192), (v3,v9,bw=161), (v3,v32,bw=105), (v3,v33,bw=136), (v2,v1,bw=132), (v2,v4,bw=128), (v2,v5,bw=149), (v2,v6,bw=155), (v2,v30,bw=142), (v2,v32,bw=200), (v2,v34,bw=198), (v1,v4,bw=165), (v1,v5,bw=130), (v1,v6,bw=182), (v1,v31,bw=115), (v1,v32,bw=181), (v1,v35,bw=100), (v4,v8,bw=153), (v4,v32,bw=184), (v5,v6,bw=158), (v5,v9,bw=141), (v5,v30,bw=118), (v5,v34,bw=149), (v6,v7,bw=119), (v6,v34,bw=109), (v7,v30,bw=128), (v7,v32,bw=147), (v7,v34,bw=166), (v7,v35,bw=199), (v8,v9,bw=181), (v8,v32,bw=186), (v8,v33,bw=137), (v9,v31,bw=200), (v9,v33,bw=158), (v9,v34,bw=187), (v9,v35,bw=119), (v30,v33,bw=178), (v31,v32,bw=149), (v31,v33,bw=114), (v31,v34,bw=152), (v31,v35,bw=122), (v32,v34,bw=127), (v33,v35,bw=150)\n\nVNF chain and demand:\nChain order: f1(CPU=18), f2(CPU=23), f3(CPU=12), f4(CPU=25)\nSource node: v8\nDestination node: v31\nBandwidth demand: 42\n\nImportant: Each VNF must be placed on a distinct node. The path must go source -> node(f1) -> node(f2) -> ... -> destination. Respect all node CPU and link bandwidth capacities."
+  },
+  "raw_response": "{\"placement\": {\"f1\": \"v8\", \"f2\": \"v4\", \"f3\": \"v1\", \"f4\": \"v31\"}, \"path\": [[\"source\", \"v8\"], [\"v8\", \"v4\"], [\"v4\", \"v1\"], [\"v1\", \"v31\"], [\"v31\", \"destination\"]]}\n\nReasoning:\n- Chosen a simple path from source v8 to destination v31: v8 -> v4 -> v1 -> v31.\n- Placed VNFs in chain order on those nodes (f1 on v8, f2 on v4, f3 on v1, f4 on v31). All VNF placements are on distinct nodes as required.\n- CPU checks: v8(51) >= f1(18); v4(50) >= f2(23); v1(74) >= f3(12); v31(73) >= f4(25).\n- Bandwidth checks along the path: v8\u2013v4 (153) \u2265 42; v4\u2013v1 (165) \u2265 42; v1\u2013v31 (115) \u2265 42. (The source/destination endpoints are v8 and v31 respectively.)\n- All constraints (CPU per node, link bandwidth, chain order, distinct VNF nodes) are satisfied.",
+  "token_usage": {
+    "prompt_tokens": 1035,
+    "completion_tokens": 1891,
+    "total_tokens": 2926
+  },
+  "latency_seconds": 30.23
+}

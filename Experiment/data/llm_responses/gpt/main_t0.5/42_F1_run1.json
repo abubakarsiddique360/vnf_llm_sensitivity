@@ -1,0 +1,22 @@
+{
+  "problem_id": 42,
+  "model": "gpt-5-mini",
+  "experiment": "main_t0.5",
+  "format": "F1",
+  "run": 1,
+  "temperature": 0.0,
+  "prompt_template": "A",
+  "noise_level": 0,
+  "timestamp": "2026-07-16T00:17:48",
+  "prompt": {
+    "system": "",
+    "user": "Nodes: v0(CPU=89), v1(CPU=78), v2(CPU=76), v3(CPU=98), v4(CPU=89), v5(CPU=94), v6(CPU=55), v7(CPU=84), v8(CPU=81), v9(CPU=66), v10(CPU=76), v11(CPU=100), v12(CPU=99), v13(CPU=60), v14(CPU=87), v15(CPU=77), v16(CPU=63)\nEdges (undirected): (v0,v7,bw=198), (v0,v11,bw=114), (v0,v16,bw=118), (v1,v2,bw=101), (v1,v5,bw=151), (v1,v6,bw=117), (v1,v11,bw=190), (v1,v14,bw=130), (v1,v15,bw=139), (v2,v3,bw=132), (v2,v4,bw=116), (v2,v6,bw=196), (v2,v10,bw=134), (v2,v11,bw=181), (v2,v13,bw=194), (v2,v14,bw=185), (v2,v15,bw=161), (v3,v4,bw=145), (v3,v6,bw=119), (v3,v7,bw=170), (v3,v8,bw=187), (v3,v10,bw=144), (v3,v15,bw=140), (v4,v5,bw=140), (v4,v6,bw=164), (v4,v11,bw=151), (v4,v14,bw=112), (v4,v15,bw=146), (v5,v6,bw=198), (v5,v10,bw=119), (v5,v11,bw=160), (v5,v16,bw=177), (v6,v15,bw=177), (v7,v9,bw=190), (v7,v10,bw=112), (v7,v11,bw=139), (v7,v14,bw=115), (v7,v15,bw=123), (v8,v9,bw=118), (v8,v11,bw=117), (v9,v13,bw=167), (v9,v14,bw=102), (v9,v15,bw=104), (v9,v16,bw=122), (v10,v16,bw=156), (v11,v13,bw=157), (v12,v13,bw=128), (v12,v15,bw=134), (v13,v16,bw=174), (v14,v15,bw=109), (v15,v16,bw=123)\n\nVNF chain and demand:\nChain order: f1(CPU=21), f2(CPU=26), f3(CPU=10), f4(CPU=29), f5(CPU=16), f6(CPU=23)\nSource node: v10\nDestination node: v6\nBandwidth demand: 62\n\nImportant: Each VNF must be placed on a distinct node. The path must go source -> node(f1) -> node(f2) -> ... -> destination. Respect all node CPU and link bandwidth capacities."
+  },
+  "raw_response": "{\"placement\": {\"f1\": \"v5\", \"f2\": \"v11\", \"f3\": \"v4\", \"f4\": \"v3\", \"f5\": \"v2\", \"f6\": \"v1\"}, \"path\": [[\"v10\", \"v5\"], [\"v5\", \"v11\"], [\"v11\", \"v4\"], [\"v4\", \"v3\"], [\"v3\", \"v2\"], [\"v2\", \"v1\"], [\"v1\", \"v6\"]]}\n\nThe path goes from source v10 through the six VNF nodes to destination v6. Each consecutive pair is an existing edge with bandwidth >= 62:\n- v10-v5 (119), v5-v11 (160), v11-v4 (151), v4-v3 (145), v3-v2 (132), v2-v1 (101), v1-v6 (117).\n\nCPU capacities at chosen nodes meet each VNF requirement:\n- f1(21) on v5(CPU 94), f2(26) on v11(100), f3(10) on v4(89), f4(29) on v3(98), f5(16) on v2(76), f6(23) on v1(78).\n\nAll VNFs are on distinct nodes and link bandwidths along the chain satisfy the 62 demand.",
+  "token_usage": {
+    "prompt_tokens": 996,
+    "completion_tokens": 1453,
+    "total_tokens": 2449
+  },
+  "latency_seconds": 11.14
+}

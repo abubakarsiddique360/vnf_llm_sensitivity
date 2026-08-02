@@ -1,0 +1,22 @@
+{
+  "problem_id": 67,
+  "model": "deepseek-v4-flash",
+  "experiment": "main_t0.5",
+  "format": "F1",
+  "run": 1,
+  "temperature": 0.5,
+  "prompt_template": "A",
+  "noise_level": 0,
+  "timestamp": "2026-07-13T04:13:43",
+  "prompt": {
+    "system": "",
+    "user": "Nodes: v0(CPU=61), v1(CPU=74), v2(CPU=74), v3(CPU=90), v4(CPU=81), v5(CPU=99), v6(CPU=78), v7(CPU=77), v8(CPU=67), v9(CPU=50), v10(CPU=98), v11(CPU=63), v12(CPU=80), v13(CPU=53), v14(CPU=71), v15(CPU=89), v16(CPU=56), v17(CPU=56), v18(CPU=88), v19(CPU=96), v20(CPU=83), v21(CPU=84), v22(CPU=96), v23(CPU=96), v24(CPU=50), v25(CPU=90), v26(CPU=68), v27(CPU=77), v28(CPU=53), v29(CPU=84), v30(CPU=50)\nEdges (undirected): (v0,v20,bw=113), (v0,v1,bw=186), (v1,v7,bw=166), (v1,v9,bw=174), (v1,v3,bw=169), (v2,v11,bw=178), (v2,v12,bw=153), (v2,v28,bw=151), (v3,v4,bw=122), (v4,v6,bw=109), (v5,v14,bw=139), (v6,v8,bw=128), (v7,v14,bw=170), (v7,v28,bw=196), (v8,v10,bw=174), (v9,v21,bw=187), (v9,v22,bw=159), (v10,v13,bw=162), (v11,v16,bw=157), (v13,v23,bw=120), (v13,v26,bw=182), (v13,v30,bw=109), (v13,v17,bw=177), (v15,v24,bw=122), (v15,v30,bw=110), (v16,v19,bw=197), (v17,v18,bw=141), (v18,v25,bw=146), (v19,v21,bw=187), (v25,v27,bw=157), (v27,v29,bw=168)\n\nVNF chain and demand:\nChain order: f1(CPU=16), f2(CPU=15), f3(CPU=10), f4(CPU=21), f5(CPU=18)\nSource node: v21\nDestination node: v1\nBandwidth demand: 76\n\nImportant: Each VNF must be placed on a distinct node. The path must go source -> node(f1) -> node(f2) -> ... -> destination. Respect all node CPU and link bandwidth capacities."
+  },
+  "raw_response": "{\"placement\": {\"f1\": \"v19\", \"f2\": \"v16\", \"f3\": \"v11\", \"f4\": \"v2\", \"f5\": \"v28\"}, \"path\": [[\"v21\", \"v19\"], [\"v19\", \"v16\"], [\"v16\", \"v11\"], [\"v11\", \"v2\"], [\"v2\", \"v28\"], [\"v28\", \"v7\"], [\"v7\", \"v1\"]]}",
+  "token_usage": {
+    "prompt_tokens": 960,
+    "completion_tokens": 3566,
+    "total_tokens": 4526
+  },
+  "latency_seconds": 30.19
+}

@@ -1,0 +1,22 @@
+{
+  "problem_id": 118,
+  "model": "deepseek-v4-flash",
+  "experiment": "main_t0.5",
+  "format": "F3",
+  "run": 1,
+  "temperature": 0.5,
+  "prompt_template": "A",
+  "noise_level": 0,
+  "timestamp": "2026-07-13T05:58:45",
+  "prompt": {
+    "system": "",
+    "user": "We have a network with 16 nodes. Node v0 has a CPU capacity of 78 units. Node v1 has a CPU capacity of 89 units. Node v2 has a CPU capacity of 69 units. Node v3 has a CPU capacity of 78 units. Node v4 has a CPU capacity of 69 units. Node v5 has a CPU capacity of 74 units. Node v6 has a CPU capacity of 80 units. Node v7 has a CPU capacity of 55 units. Node v8 has a CPU capacity of 54 units. Node v9 has a CPU capacity of 73 units. Node v10 has a CPU capacity of 71 units. Node v11 has a CPU capacity of 76 units. Node v12 has a CPU capacity of 88 units. Node v13 has a CPU capacity of 88 units. Node v14 has a CPU capacity of 64 units. Node v15 has a CPU capacity of 66 units. The link between v0 and v2 can carry up to 100 units of bandwidth. The link between v0 and v3 can carry up to 188 units of bandwidth. The link between v0 and v5 can carry up to 150 units of bandwidth. The link between v0 and v6 can carry up to 171 units of bandwidth. The link between v0 and v8 can carry up to 172 units of bandwidth. The link between v0 and v13 can carry up to 134 units of bandwidth. The link between v0 and v15 can carry up to 169 units of bandwidth. The link between v1 and v6 can carry up to 175 units of bandwidth. The link between v1 and v10 can carry up to 192 units of bandwidth. The link between v2 and v3 can carry up to 137 units of bandwidth. The link between v2 and v5 can carry up to 177 units of bandwidth. The link between v2 and v11 can carry up to 187 units of bandwidth. The link between v2 and v12 can carry up to 159 units of bandwidth. The link between v2 and v15 can carry up to 164 units of bandwidth. The link between v3 and v9 can carry up to 101 units of bandwidth. The link between v3 and v12 can carry up to 166 units of bandwidth. The link between v3 and v13 can carry up to 169 units of bandwidth. The link between v3 and v14 can carry up to 150 units of bandwidth. The link between v3 and v15 can carry up to 190 units of bandwidth. The link between v4 and v5 can carry up to 129 units of bandwidth. The link between v4 and v6 can carry up to 138 units of bandwidth. The link between v5 and v10 can carry up to 184 units of bandwidth. The link between v5 and v11 can carry up to 150 units of bandwidth. The link between v5 and v13 can carry up to 138 units of bandwidth. The link between v6 and v7 can carry up to 177 units of bandwidth. The link between v6 and v8 can carry up to 168 units of bandwidth. The link between v6 and v10 can carry up to 142 units of bandwidth. The link between v6 and v15 can carry up to 169 units of bandwidth. The link between v7 and v11 can carry up to 110 units of bandwidth. The link between v7 and v15 can carry up to 105 units of bandwidth. The link between v8 and v10 can carry up to 169 units of bandwidth. The link between v8 and v11 can carry up to 197 units of bandwidth. The link between v8 and v12 can carry up to 122 units of bandwidth. The link between v8 and v13 can carry up to 131 units of bandwidth. The link between v10 and v13 can carry up to 132 units of bandwidth. The link between v10 and v14 can carry up to 187 units of bandwidth. The link between v11 and v12 can carry up to 145 units of bandwidth. The link between v11 and v13 can carry up to 186 units of bandwidth. The link between v11 and v14 can carry up to 190 units of bandwidth. The link between v11 and v15 can carry up to 116 units of bandwidth.\n\nVNF chain and demand:\nChain order: f1(CPU=13), f2(CPU=24), f3(CPU=17), f4(CPU=16), f5(CPU=14), f6(CPU=17), f7(CPU=28), f8(CPU=22)\nSource node: v0\nDestination node: v7\nBandwidth demand: 61\n\nImportant: Each VNF must be placed on a distinct node. The path must go source -> node(f1) -> node(f2) -> ... -> destination. Respect all node CPU and link bandwidth capacities."
+  },
+  "raw_response": "{\"placement\": {\"f1\": \"v13\", \"f2\": \"v8\", \"f3\": \"v6\", \"f4\": \"v10\", \"f5\": \"v5\", \"f6\": \"v2\", \"f7\": \"v12\", \"f8\": \"v11\"}, \"path\": [[\"source\", \"v13\"], [\"v13\", \"v8\"], [\"v8\", \"v6\"], [\"v6\", \"v10\"], [\"v10\", \"v5\"], [\"v5\", \"v2\"], [\"v2\", \"v12\"], [\"v12\", \"v11\"], [\"v11\", \"destination\"]]}",
+  "token_usage": {
+    "prompt_tokens": 1367,
+    "completion_tokens": 6146,
+    "total_tokens": 7513
+  },
+  "latency_seconds": 62.7
+}

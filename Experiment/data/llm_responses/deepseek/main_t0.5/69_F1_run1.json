@@ -1,0 +1,22 @@
+{
+  "problem_id": 69,
+  "model": "deepseek-v4-flash",
+  "experiment": "main_t0.5",
+  "format": "F1",
+  "run": 1,
+  "temperature": 0.5,
+  "prompt_template": "A",
+  "noise_level": 0,
+  "timestamp": "2026-07-13T04:18:18",
+  "prompt": {
+    "system": "",
+    "user": "Nodes: v0(CPU=87), v1(CPU=99), v2(CPU=57), v3(CPU=96), v4(CPU=93), v5(CPU=74), v6(CPU=80), v7(CPU=77), v8(CPU=73), v9(CPU=66), v10(CPU=79), v11(CPU=95), v12(CPU=77), v13(CPU=52), v14(CPU=54), v15(CPU=97), v16(CPU=73), v17(CPU=82), v18(CPU=79), v19(CPU=97), v20(CPU=78), v21(CPU=100), v22(CPU=87), v23(CPU=67), v24(CPU=91), v25(CPU=72), v26(CPU=58)\nEdges (undirected): (v0,v1,bw=143), (v0,v2,bw=165), (v0,v3,bw=140), (v0,v4,bw=178), (v0,v5,bw=124), (v0,v8,bw=104), (v0,v12,bw=146), (v0,v13,bw=136), (v0,v22,bw=123), (v1,v17,bw=101), (v2,v4,bw=155), (v2,v5,bw=171), (v2,v6,bw=153), (v2,v7,bw=150), (v2,v12,bw=121), (v2,v24,bw=131), (v3,v4,bw=134), (v3,v6,bw=153), (v3,v10,bw=156), (v3,v22,bw=133), (v3,v26,bw=127), (v4,v5,bw=175), (v4,v6,bw=103), (v4,v7,bw=177), (v4,v8,bw=153), (v4,v11,bw=147), (v4,v13,bw=177), (v4,v14,bw=127), (v5,v9,bw=134), (v6,v7,bw=132), (v6,v8,bw=139), (v6,v9,bw=187), (v6,v10,bw=163), (v6,v11,bw=148), (v6,v12,bw=137), (v6,v14,bw=146), (v6,v15,bw=195), (v6,v19,bw=108), (v6,v21,bw=157), (v6,v24,bw=106), (v7,v9,bw=147), (v7,v13,bw=180), (v7,v16,bw=189), (v7,v18,bw=118), (v7,v23,bw=150), (v7,v25,bw=125), (v8,v15,bw=140), (v8,v16,bw=183), (v8,v19,bw=160), (v9,v10,bw=170), (v9,v11,bw=157), (v9,v19,bw=191), (v9,v20,bw=198), (v10,v18,bw=147), (v10,v21,bw=178), (v10,v23,bw=163), (v11,v14,bw=108), (v11,v15,bw=161), (v11,v17,bw=138), (v11,v25,bw=171), (v12,v22,bw=159), (v13,v20,bw=100), (v15,v16,bw=181), (v15,v17,bw=117), (v15,v18,bw=153), (v17,v20,bw=200), (v17,v24,bw=179), (v17,v26,bw=167), (v18,v21,bw=148), (v18,v26,bw=171), (v20,v23,bw=117), (v20,v25,bw=171)\n\nVNF chain and demand:\nChain order: f1(CPU=12), f2(CPU=17), f3(CPU=21), f4(CPU=16)\nSource node: v0\nDestination node: v18\nBandwidth demand: 64\n\nImportant: Each VNF must be placed on a distinct node. The path must go source -> node(f1) -> node(f2) -> ... -> destination. Respect all node CPU and link bandwidth capacities."
+  },
+  "raw_response": "{\"placement\": {\"f1\": \"v4\", \"f2\": \"v6\", \"f3\": \"v9\", \"f4\": \"v10\"}, \"path\": [[\"source\", \"v4\"], [\"v4\", \"v6\"], [\"v6\", \"v9\"], [\"v9\", \"v10\"], [\"v10\", \"destination\"]]}",
+  "token_usage": {
+    "prompt_tokens": 1335,
+    "completion_tokens": 4854,
+    "total_tokens": 6189
+  },
+  "latency_seconds": 41.89
+}

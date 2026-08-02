@@ -1,0 +1,22 @@
+{
+  "problem_id": 54,
+  "model": "deepseek-v4-flash",
+  "experiment": "main_t0",
+  "format": "F5",
+  "run": 1,
+  "temperature": 0.0,
+  "prompt_template": "A",
+  "noise_level": 0,
+  "timestamp": "2026-07-12T19:39:12",
+  "prompt": {
+    "system": "",
+    "user": "v0 -> (v10,198), (v1,195), (v3,194), (v8,192), (v13,172), (v4,163), (v9,138), (v15,134), (v12,132), (v7,121), (v5,113), (v2,102)\nv1 -> (v0,195), (v16,183), (v4,134), (v14,125), (v5,115), (v12,112), (v6,109), (v11,106)\nv2 -> (v13,172), (v10,161), (v15,156), (v17,155), (v11,131), (v6,108), (v0,102)\nv3 -> (v0,194), (v4,123), (v17,106)\nv4 -> (v16,197), (v6,179), (v0,163), (v1,134), (v9,124), (v3,123), (v5,104)\nv5 -> (v7,199), (v17,193), (v13,182), (v11,179), (v8,176), (v10,155), (v9,145), (v1,115), (v0,113), (v4,104)\nv6 -> (v14,184), (v8,180), (v4,179), (v7,120), (v1,109), (v2,108)\nv7 -> (v5,199), (v0,121), (v6,120)\nv8 -> (v0,192), (v6,180), (v5,176)\nv9 -> (v12,174), (v5,145), (v0,138), (v4,124), (v14,116)\nv10 -> (v0,198), (v15,196), (v2,161), (v5,155), (v16,108)\nv11 -> (v5,179), (v2,131), (v1,106)\nv12 -> (v9,174), (v0,132), (v1,112)\nv13 -> (v5,182), (v0,172), (v2,172)\nv14 -> (v6,184), (v1,125), (v9,116)\nv15 -> (v10,196), (v2,156), (v0,134)\nv16 -> (v4,197), (v1,183), (v10,108)\nv17 -> (v5,193), (v2,155), (v3,106)\nNode capacities: v0:93, v1:68, v2:81, v3:92, v4:62, v5:88, v6:53, v7:79, v8:90, v9:87, v10:91, v11:76, v12:59, v13:98, v14:62, v15:52, v16:54, v17:80\n\nVNF chain and demand:\nChain order: f1(CPU=19), f2(CPU=14), f3(CPU=12), f4(CPU=22), f5(CPU=21)\nSource node: v16\nDestination node: v5\nBandwidth demand: 25\n\nImportant: Each VNF must be placed on a distinct node. The path must go source -> node(f1) -> node(f2) -> ... -> destination. Respect all node CPU and link bandwidth capacities."
+  },
+  "raw_response": "{\"placement\": {\"f1\": \"v4\", \"f2\": \"v6\", \"f3\": \"v14\", \"f4\": \"v1\", \"f5\": \"v0\"}, \"path\": [[\"v16\", \"v4\"], [\"v4\", \"v6\"], [\"v6\", \"v14\"], [\"v14\", \"v1\"], [\"v1\", \"v0\"], [\"v0\", \"v5\"]]}",
+  "token_usage": {
+    "prompt_tokens": 1112,
+    "completion_tokens": 4599,
+    "total_tokens": 5711
+  },
+  "latency_seconds": 43.3
+}

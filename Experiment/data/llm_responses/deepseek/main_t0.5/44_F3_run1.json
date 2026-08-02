@@ -1,0 +1,22 @@
+{
+  "problem_id": 44,
+  "model": "deepseek-v4-flash",
+  "experiment": "main_t0.5",
+  "format": "F3",
+  "run": 1,
+  "temperature": 0.5,
+  "prompt_template": "A",
+  "noise_level": 0,
+  "timestamp": "2026-07-13T03:32:42",
+  "prompt": {
+    "system": "",
+    "user": "We have a network with 20 nodes. Node v0 has a CPU capacity of 70 units. Node v1 has a CPU capacity of 70 units. Node v2 has a CPU capacity of 80 units. Node v3 has a CPU capacity of 96 units. Node v4 has a CPU capacity of 61 units. Node v5 has a CPU capacity of 83 units. Node v6 has a CPU capacity of 83 units. Node v7 has a CPU capacity of 98 units. Node v8 has a CPU capacity of 75 units. Node v9 has a CPU capacity of 57 units. Node v10 has a CPU capacity of 69 units. Node v11 has a CPU capacity of 73 units. Node v12 has a CPU capacity of 66 units. Node v13 has a CPU capacity of 51 units. Node v14 has a CPU capacity of 89 units. Node v15 has a CPU capacity of 51 units. Node v16 has a CPU capacity of 91 units. Node v17 has a CPU capacity of 90 units. Node v18 has a CPU capacity of 59 units. Node v19 has a CPU capacity of 88 units. The link between v0 and v1 can carry up to 164 units of bandwidth. The link between v0 and v2 can carry up to 180 units of bandwidth. The link between v1 and v15 can carry up to 149 units of bandwidth. The link between v2 and v3 can carry up to 124 units of bandwidth. The link between v3 and v4 can carry up to 154 units of bandwidth. The link between v4 and v5 can carry up to 161 units of bandwidth. The link between v5 and v6 can carry up to 117 units of bandwidth. The link between v6 and v7 can carry up to 152 units of bandwidth. The link between v6 and v8 can carry up to 118 units of bandwidth. The link between v8 and v9 can carry up to 173 units of bandwidth. The link between v9 and v10 can carry up to 127 units of bandwidth. The link between v10 and v16 can carry up to 141 units of bandwidth. The link between v11 and v16 can carry up to 112 units of bandwidth. The link between v12 and v16 can carry up to 127 units of bandwidth. The link between v12 and v13 can carry up to 185 units of bandwidth. The link between v13 and v19 can carry up to 111 units of bandwidth. The link between v14 and v19 can carry up to 175 units of bandwidth. The link between v17 and v19 can carry up to 148 units of bandwidth. The link between v17 and v18 can carry up to 170 units of bandwidth.\n\nVNF chain and demand:\nChain order: f1(CPU=25), f2(CPU=29), f3(CPU=26), f4(CPU=17), f5(CPU=21), f6(CPU=28), f7(CPU=15), f8(CPU=13)\nSource node: v1\nDestination node: v9\nBandwidth demand: 67\n\nImportant: Each VNF must be placed on a distinct node. The path must go source -> node(f1) -> node(f2) -> ... -> destination. Respect all node CPU and link bandwidth capacities."
+  },
+  "raw_response": "{\"placement\": {\"f1\": \"v0\", \"f2\": \"v2\", \"f3\": \"v3\", \"f4\": \"v4\", \"f5\": \"v5\", \"f6\": \"v6\", \"f7\": \"v7\", \"f8\": \"v8\"}, \"path\": [[\"v1\", \"v0\"], [\"v0\", \"v2\"], [\"v2\", \"v3\"], [\"v3\", \"v4\"], [\"v4\", \"v5\"], [\"v5\", \"v6\"], [\"v6\", \"v7\"], [\"v7\", \"v6\"], [\"v6\", \"v8\"], [\"v8\", \"v9\"]]}",
+  "token_usage": {
+    "prompt_tokens": 1037,
+    "completion_tokens": 4551,
+    "total_tokens": 5588
+  },
+  "latency_seconds": 42.71
+}

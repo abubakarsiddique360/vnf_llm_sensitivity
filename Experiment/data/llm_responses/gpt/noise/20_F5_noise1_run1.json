@@ -1,0 +1,22 @@
+{
+  "problem_id": 20,
+  "model": "gpt-5-mini",
+  "experiment": "noise",
+  "format": "F5",
+  "run": 1,
+  "temperature": 0.0,
+  "prompt_template": "A",
+  "noise_level": 1,
+  "timestamp": "2026-07-15T16:32:52",
+  "prompt": {
+    "system": "",
+    "user": "v0 -> (v1,195), (v6,171), (v8,168), (v12,155), (v9,145), (v125,139), (v5,136), (v120,125), (v124,119), (v3,113)\nv12 -> (v7,192), (v6,173), (v9,161), (v0,155), (v123,136), (v5,129), (v4,127), (v1,105), (v2,101)\nv2 -> (v1,200), (v124,198), (v6,155), (v5,149), (v120,142), (v3,132), (v4,128), (v12,101)\nv3 -> (v6,182), (v1,181), (v4,165), (v2,132), (v5,130), (v121,115), (v0,113), (v125,100)\nv4 -> (v1,184), (v3,165), (v8,153), (v2,128), (v12,127)\nv5 -> (v6,158), (v2,149), (v124,149), (v9,141), (v0,136), (v3,130), (v12,129), (v120,118)\nv6 -> (v3,182), (v12,173), (v0,171), (v5,158), (v2,155), (v7,119), (v124,109)\nv7 -> (v125,199), (v12,192), (v124,166), (v1,147), (v120,128), (v6,119)\nv8 -> (v1,186), (v9,181), (v0,168), (v4,153), (v123,137)\nv9 -> (v121,200), (v124,187), (v8,181), (v12,161), (v123,158), (v0,145), (v5,141), (v125,119)\nv120 -> (v123,178), (v2,142), (v7,128), (v0,125), (v5,118)\nv121 -> (v9,200), (v124,152), (v1,149), (v125,122), (v3,115), (v123,114)\nv1 -> (v2,200), (v0,195), (v8,186), (v4,184), (v3,181), (v121,149), (v7,147), (v124,127), (v12,105)\nv123 -> (v120,178), (v9,158), (v125,150), (v8,137), (v12,136), (v121,114)\nv124 -> (v2,198), (v9,187), (v7,166), (v121,152), (v5,149), (v1,127), (v0,119), (v6,109)\nv125 -> (v7,199), (v123,150), (v0,139), (v121,122), (v9,119), (v3,100)\nNode capacities: v0:50, v12:93, v2:77, v3:74, v4:50, v5:76, v6:98, v7:82, v8:51, v9:95, v120:54, v121:73, v1:90, v123:69, v124:82, v125:60\n\nVNF chain and demand:\nChain order: f1(CPU=18), f2(CPU=23), f3(CPU=12), f4(CPU=25)\nSource node: v8\nDestination node: v121\nBandwidth demand: 42\n\nImportant: Each VNF must be placed on a distinct node. The path must go source -> node(f1) -> node(f2) -> ... -> destination. Respect all node CPU and link bandwidth capacities."
+  },
+  "raw_response": "{\"placement\": {\"f1\": \"v1\", \"f2\": \"v3\", \"f3\": \"v5\", \"f4\": \"v9\"}, \"path\": [[\"v8\", \"v1\"], [\"v1\", \"v3\"], [\"v3\", \"v5\"], [\"v5\", \"v9\"], [\"v9\", \"v121\"]]}\n\nReasoning:\n- Chosen path: v8 -> v1 -> v3 -> v5 -> v9 -> v121, which follows the required chain order.\n- CPU checks: v1(90) >=18 (f1), v3(74) >=23 (f2), v5(76) >=12 (f3), v9(95) >=25 (f4).\n- Bandwidth checks: all links on the path have capacities >= the 42 demand (v8-v1:186, v1-v3:181, v3-v5:130, v5-v9:141, v9-v121:200).\n- All VNFs are on distinct nodes and the path goes from the given source v8 to destination v121.",
+  "token_usage": {
+    "prompt_tokens": 1161,
+    "completion_tokens": 2229,
+    "total_tokens": 3390
+  },
+  "latency_seconds": 22.59
+}

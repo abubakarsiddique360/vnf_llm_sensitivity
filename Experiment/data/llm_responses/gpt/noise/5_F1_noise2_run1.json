@@ -1,0 +1,22 @@
+{
+  "problem_id": 5,
+  "model": "gpt-5-mini",
+  "experiment": "noise",
+  "format": "F1",
+  "run": 1,
+  "temperature": 0.0,
+  "prompt_template": "A",
+  "noise_level": 2,
+  "timestamp": "2026-07-15T15:10:59",
+  "prompt": {
+    "system": "",
+    "user": "Nodes: v0(CPU=63), v1(CPU=98), v30(CPU=97), v3(CPU=83), v4(CPU=52), v5(CPU=58), v6(CPU=97), v7(CPU=56), v8(CPU=79), v9(CPU=50), v10(CPU=72), v11(CPU=66), v12(CPU=62), v13(CPU=99), v300(CPU=99), v15(CPU=62), v16(CPU=57), v17(CPU=100), v18(CPU=91), v19(CPU=71), v14(CPU=64), v301(CPU=81), v31(CPU=95), v303(CPU=87), v304(CPU=97), v305(CPU=66), v306(CPU=60), v307(CPU=65), v308(CPU=82), v309(CPU=60), v2(CPU=99), v302(CPU=89), v32(CPU=51), v33(CPU=95)\nEdges (undirected): (v0,v1,bw=177), (v1,v31,bw=155), (v1,v30,bw=189), (v30,v303,bw=123), (v30,v302,bw=120), (v30,v3,bw=172), (v3,v33,bw=145), (v4,v33,bw=140), (v5,v33,bw=145), (v5,v305,bw=136), (v6,v13,bw=167), (v7,v8,bw=158), (v7,v306,bw=150), (v7,v2,bw=146), (v7,v305,bw=184), (v7,v32,bw=160), (v9,v15,bw=112), (v10,v32,bw=130), (v10,v12,bw=197), (v11,v14,bw=126), (v11,v302,bw=151), (v12,v300,bw=187), (v13,v305,bw=133), (v300,v16,bw=169), (v15,v32,bw=140), (v16,v17,bw=168), (v17,v18,bw=126), (v18,v301,bw=195), (v19,v309,bw=194), (v301,v304,bw=183), (v304,v307,bw=127), (v306,v308,bw=128), (v309,v32,bw=135)\n\nVNF chain and demand:\nChain order: f1(CPU=29), f2(CPU=10), f3(CPU=22), f4(CPU=21)\nSource node: v302\nDestination node: v5\nBandwidth demand: 20\n\nImportant: Each VNF must be placed on a distinct node. The path must go source -> node(f1) -> node(f2) -> ... -> destination. Respect all node CPU and link bandwidth capacities."
+  },
+  "raw_response": "{\"placement\": {\"f1\": \"v30\", \"f2\": \"v3\", \"f3\": \"v33\", \"f4\": \"v5\"}, \"path\": [[\"v302\", \"v30\"], [\"v30\", \"v3\"], [\"v3\", \"v33\"], [\"v33\", \"v5\"]]}\n\nReasoning:\n- Path follows chain order from source v302 to destination v5 via nodes hosting the VNFs.\n- Node CPUs vs VNF demands: v30(97) \u2265 f1(29), v3(83) \u2265 f2(10), v33(95) \u2265 f3(22), v5(58) \u2265 f4(21).\n- All VNFs are on distinct nodes.\n- Edge bandwidths meet the 20 demand: v302\u2013v30 bw=120, v30\u2013v3 bw=172, v3\u2013v33 bw=145, v33\u2013v5 bw=145 (all \u226520).",
+  "token_usage": {
+    "prompt_tokens": 921,
+    "completion_tokens": 3414,
+    "total_tokens": 4335
+  },
+  "latency_seconds": 48.86
+}

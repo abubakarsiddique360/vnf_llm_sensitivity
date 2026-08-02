@@ -1,0 +1,22 @@
+{
+  "problem_id": 118,
+  "model": "deepseek-v4-flash",
+  "experiment": "main_t0.5",
+  "format": "F1",
+  "run": 1,
+  "temperature": 0.5,
+  "prompt_template": "A",
+  "noise_level": 0,
+  "timestamp": "2026-07-13T05:58:56",
+  "prompt": {
+    "system": "",
+    "user": "Nodes: v0(CPU=78), v1(CPU=89), v2(CPU=69), v3(CPU=78), v4(CPU=69), v5(CPU=74), v6(CPU=80), v7(CPU=55), v8(CPU=54), v9(CPU=73), v10(CPU=71), v11(CPU=76), v12(CPU=88), v13(CPU=88), v14(CPU=64), v15(CPU=66)\nEdges (undirected): (v0,v2,bw=100), (v0,v3,bw=188), (v0,v5,bw=150), (v0,v6,bw=171), (v0,v8,bw=172), (v0,v13,bw=134), (v0,v15,bw=169), (v1,v6,bw=175), (v1,v10,bw=192), (v2,v3,bw=137), (v2,v5,bw=177), (v2,v11,bw=187), (v2,v12,bw=159), (v2,v15,bw=164), (v3,v9,bw=101), (v3,v12,bw=166), (v3,v13,bw=169), (v3,v14,bw=150), (v3,v15,bw=190), (v4,v5,bw=129), (v4,v6,bw=138), (v5,v10,bw=184), (v5,v11,bw=150), (v5,v13,bw=138), (v6,v7,bw=177), (v6,v8,bw=168), (v6,v10,bw=142), (v6,v15,bw=169), (v7,v11,bw=110), (v7,v15,bw=105), (v8,v10,bw=169), (v8,v11,bw=197), (v8,v12,bw=122), (v8,v13,bw=131), (v10,v13,bw=132), (v10,v14,bw=187), (v11,v12,bw=145), (v11,v13,bw=186), (v11,v14,bw=190), (v11,v15,bw=116)\n\nVNF chain and demand:\nChain order: f1(CPU=13), f2(CPU=24), f3(CPU=17), f4(CPU=16), f5(CPU=14), f6(CPU=17), f7(CPU=28), f8(CPU=22)\nSource node: v0\nDestination node: v7\nBandwidth demand: 61\n\nImportant: Each VNF must be placed on a distinct node. The path must go source -> node(f1) -> node(f2) -> ... -> destination. Respect all node CPU and link bandwidth capacities."
+  },
+  "raw_response": "{\"placement\": {\"f1\": \"v2\", \"f2\": \"v3\", \"f3\": \"v12\", \"f4\": \"v8\", \"f5\": \"v10\", \"f6\": \"v1\", \"f7\": \"v6\", \"f8\": \"v15\"}, \"path\": [[\"v0\", \"v2\"], [\"v2\", \"v3\"], [\"v3\", \"v12\"], [\"v12\", \"v8\"], [\"v8\", \"v10\"], [\"v10\", \"v1\"], [\"v1\", \"v6\"], [\"v6\", \"v15\"], [\"v15\", \"v11\"], [\"v11\", \"v7\"]]}",
+  "token_usage": {
+    "prompt_tokens": 966,
+    "completion_tokens": 11284,
+    "total_tokens": 12250
+  },
+  "latency_seconds": 106.96
+}

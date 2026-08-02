@@ -1,0 +1,22 @@
+{
+  "problem_id": 29,
+  "model": "deepseek-v4-flash",
+  "experiment": "main_t0.5",
+  "format": "F1",
+  "run": 1,
+  "temperature": 0.5,
+  "prompt_template": "A",
+  "noise_level": 0,
+  "timestamp": "2026-07-13T03:04:41",
+  "prompt": {
+    "system": "",
+    "user": "Nodes: v0(CPU=59), v1(CPU=95), v2(CPU=89), v3(CPU=68), v4(CPU=51), v5(CPU=93), v6(CPU=85), v7(CPU=65), v8(CPU=92), v9(CPU=82), v10(CPU=96), v11(CPU=75), v12(CPU=79), v13(CPU=77), v14(CPU=90)\nEdges (undirected): (v0,v1,bw=176), (v1,v2,bw=174), (v2,v3,bw=129), (v3,v4,bw=138), (v4,v5,bw=168), (v5,v6,bw=178), (v6,v7,bw=195), (v7,v8,bw=200), (v8,v9,bw=164), (v9,v11,bw=173), (v9,v10,bw=143), (v10,v12,bw=172), (v12,v13,bw=185), (v13,v14,bw=141)\n\nVNF chain and demand:\nChain order: f1(CPU=25), f2(CPU=25), f3(CPU=10), f4(CPU=13)\nSource node: v4\nDestination node: v11\nBandwidth demand: 70\n\nImportant: Each VNF must be placed on a distinct node. The path must go source -> node(f1) -> node(f2) -> ... -> destination. Respect all node CPU and link bandwidth capacities."
+  },
+  "raw_response": "{\"placement\": {\"f1\": \"v5\", \"f2\": \"v6\", \"f3\": \"v7\", \"f4\": \"v8\"}, \"path\": [[\"v4\", \"v5\"], [\"v5\", \"v6\"], [\"v6\", \"v7\"], [\"v7\", \"v8\"], [\"v8\", \"v9\"], [\"v9\", \"v11\"]]}",
+  "token_usage": {
+    "prompt_tokens": 671,
+    "completion_tokens": 12121,
+    "total_tokens": 12792
+  },
+  "latency_seconds": 107.77
+}

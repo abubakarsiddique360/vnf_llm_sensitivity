@@ -1,0 +1,22 @@
+{
+  "problem_id": 67,
+  "model": "deepseek-v4-flash",
+  "experiment": "main_t0.5",
+  "format": "F5",
+  "run": 1,
+  "temperature": 0.5,
+  "prompt_template": "A",
+  "noise_level": 0,
+  "timestamp": "2026-07-13T04:14:57",
+  "prompt": {
+    "system": "",
+    "user": "v0 -> (v1,186), (v20,113)\nv1 -> (v0,186), (v9,174), (v3,169), (v7,166)\nv2 -> (v11,178), (v12,153), (v28,151)\nv3 -> (v1,169), (v4,122)\nv4 -> (v3,122), (v6,109)\nv5 -> (v14,139)\nv6 -> (v8,128), (v4,109)\nv7 -> (v28,196), (v14,170), (v1,166)\nv8 -> (v10,174), (v6,128)\nv9 -> (v21,187), (v1,174), (v22,159)\nv10 -> (v8,174), (v13,162)\nv11 -> (v2,178), (v16,157)\nv12 -> (v2,153)\nv13 -> (v26,182), (v17,177), (v10,162), (v23,120), (v30,109)\nv14 -> (v7,170), (v5,139)\nv15 -> (v24,122), (v30,110)\nv16 -> (v19,197), (v11,157)\nv17 -> (v13,177), (v18,141)\nv18 -> (v25,146), (v17,141)\nv19 -> (v16,197), (v21,187)\nv20 -> (v0,113)\nv21 -> (v9,187), (v19,187)\nv22 -> (v9,159)\nv23 -> (v13,120)\nv24 -> (v15,122)\nv25 -> (v27,157), (v18,146)\nv26 -> (v13,182)\nv27 -> (v29,168), (v25,157)\nv28 -> (v7,196), (v2,151)\nv29 -> (v27,168)\nv30 -> (v15,110), (v13,109)\nNode capacities: v0:61, v1:74, v2:74, v3:90, v4:81, v5:99, v6:78, v7:77, v8:67, v9:50, v10:98, v11:63, v12:80, v13:53, v14:71, v15:89, v16:56, v17:56, v18:88, v19:96, v20:83, v21:84, v22:96, v23:96, v24:50, v25:90, v26:68, v27:77, v28:53, v29:84, v30:50\n\nVNF chain and demand:\nChain order: f1(CPU=16), f2(CPU=15), f3(CPU=10), f4(CPU=21), f5(CPU=18)\nSource node: v21\nDestination node: v1\nBandwidth demand: 76\n\nImportant: Each VNF must be placed on a distinct node. The path must go source -> node(f1) -> node(f2) -> ... -> destination. Respect all node CPU and link bandwidth capacities."
+  },
+  "raw_response": "{\"placement\": {\"f1\": \"v19\", \"f2\": \"v16\", \"f3\": \"v11\", \"f4\": \"v2\", \"f5\": \"v28\"}, \"path\": [[\"source\", \"v19\"], [\"v19\", \"v16\"], [\"v16\", \"v11\"], [\"v11\", \"v2\"], [\"v2\", \"v28\"], [\"v28\", \"v7\"], [\"v7\", \"destination\"]]}",
+  "token_usage": {
+    "prompt_tokens": 1048,
+    "completion_tokens": 4345,
+    "total_tokens": 5393
+  },
+  "latency_seconds": 36.28
+}

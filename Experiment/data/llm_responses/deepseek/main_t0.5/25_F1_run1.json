@@ -1,0 +1,22 @@
+{
+  "problem_id": 25,
+  "model": "deepseek-v4-flash",
+  "experiment": "main_t0.5",
+  "format": "F1",
+  "run": 1,
+  "temperature": 0.5,
+  "prompt_template": "A",
+  "noise_level": 0,
+  "timestamp": "2026-07-13T02:54:16",
+  "prompt": {
+    "system": "",
+    "user": "Nodes: v0(CPU=97), v1(CPU=85), v2(CPU=62), v3(CPU=76), v4(CPU=100), v5(CPU=74), v6(CPU=78), v7(CPU=60), v8(CPU=77), v9(CPU=75), v10(CPU=54), v11(CPU=69), v12(CPU=89), v13(CPU=94), v14(CPU=85), v15(CPU=54), v16(CPU=64), v17(CPU=52), v18(CPU=66), v19(CPU=60), v20(CPU=78), v21(CPU=77), v22(CPU=93), v23(CPU=57), v24(CPU=72), v25(CPU=60), v26(CPU=54), v27(CPU=62), v28(CPU=85), v29(CPU=70), v30(CPU=56), v31(CPU=54), v32(CPU=93), v33(CPU=55), v34(CPU=93)\nEdges (undirected): (v0,v3,bw=157), (v0,v1,bw=200), (v1,v5,bw=166), (v2,v4,bw=144), (v2,v11,bw=149), (v2,v31,bw=125), (v3,v4,bw=117), (v3,v27,bw=140), (v4,v25,bw=108), (v5,v6,bw=196), (v6,v14,bw=136), (v6,v9,bw=155), (v7,v11,bw=172), (v8,v15,bw=194), (v9,v17,bw=177), (v10,v17,bw=109), (v12,v17,bw=100), (v12,v33,bw=162), (v13,v26,bw=195), (v13,v33,bw=178), (v15,v20,bw=100), (v16,v33,bw=111), (v16,v18,bw=182), (v18,v21,bw=156), (v19,v20,bw=192), (v20,v25,bw=142), (v21,v24,bw=136), (v22,v24,bw=104), (v23,v24,bw=139), (v23,v29,bw=188), (v27,v28,bw=131), (v29,v30,bw=179), (v30,v32,bw=144), (v32,v34,bw=161)\n\nVNF chain and demand:\nChain order: f1(CPU=18), f2(CPU=28), f3(CPU=20), f4(CPU=27), f5(CPU=29), f6(CPU=12), f7(CPU=22), f8(CPU=11)\nSource node: v21\nDestination node: v17\nBandwidth demand: 68\n\nImportant: Each VNF must be placed on a distinct node. The path must go source -> node(f1) -> node(f2) -> ... -> destination. Respect all node CPU and link bandwidth capacities."
+  },
+  "raw_response": "{\"placement\": {\"f1\": \"v21\", \"f2\": \"v18\", \"f3\": \"v16\", \"f4\": \"v33\", \"f5\": \"v13\", \"f6\": \"v26\", \"f7\": \"v12\", \"f8\": \"v17\"}, \"path\": [[\"v21\", \"v18\"], [\"v18\", \"v16\"], [\"v16\", \"v33\"], [\"v33\", \"v13\"], [\"v13\", \"v26\"], [\"v26\", \"v13\"], [\"v13\", \"v33\"], [\"v33\", \"v12\"], [\"v12\", \"v17\"]]}",
+  "token_usage": {
+    "prompt_tokens": 1039,
+    "completion_tokens": 9907,
+    "total_tokens": 10946
+  },
+  "latency_seconds": 86.43
+}

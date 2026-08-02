@@ -1,0 +1,22 @@
+{
+  "problem_id": 119,
+  "model": "deepseek-v4-flash",
+  "experiment": "main_t0",
+  "format": "F1",
+  "run": 1,
+  "temperature": 0.0,
+  "prompt_template": "A",
+  "noise_level": 0,
+  "timestamp": "2026-07-12T21:52:22",
+  "prompt": {
+    "system": "",
+    "user": "Nodes: v0(CPU=51), v1(CPU=61), v2(CPU=91), v3(CPU=95), v4(CPU=91), v5(CPU=93), v6(CPU=80), v7(CPU=65), v8(CPU=99), v9(CPU=82), v10(CPU=51), v11(CPU=70), v12(CPU=89), v13(CPU=85), v14(CPU=98), v15(CPU=83), v16(CPU=86), v17(CPU=64), v18(CPU=99), v19(CPU=99), v20(CPU=83), v21(CPU=58), v22(CPU=93), v23(CPU=83), v24(CPU=65), v25(CPU=87), v26(CPU=60), v27(CPU=95), v28(CPU=58), v29(CPU=81), v30(CPU=50), v31(CPU=79), v32(CPU=92), v33(CPU=94), v34(CPU=70), v35(CPU=76), v36(CPU=96), v37(CPU=77), v38(CPU=87), v39(CPU=59), v40(CPU=50), v41(CPU=68), v42(CPU=61), v43(CPU=63), v44(CPU=67), v45(CPU=53), v46(CPU=51), v47(CPU=85), v48(CPU=81), v49(CPU=72)\nEdges (undirected): (v0,v1,bw=146), (v0,v2,bw=165), (v0,v3,bw=136), (v0,v4,bw=150), (v0,v5,bw=159), (v0,v9,bw=135), (v0,v11,bw=140), (v0,v13,bw=105), (v0,v15,bw=125), (v0,v17,bw=160), (v0,v18,bw=172), (v0,v19,bw=184), (v0,v21,bw=148), (v0,v27,bw=160), (v0,v30,bw=153), (v0,v32,bw=147), (v0,v34,bw=190), (v0,v49,bw=103), (v1,v4,bw=167), (v1,v5,bw=194), (v1,v6,bw=119), (v1,v8,bw=131), (v1,v12,bw=133), (v1,v13,bw=160), (v1,v19,bw=173), (v1,v23,bw=167), (v1,v27,bw=162), (v1,v34,bw=154), (v1,v35,bw=164), (v1,v37,bw=182), (v1,v43,bw=183), (v1,v46,bw=152), (v2,v7,bw=166), (v2,v31,bw=158), (v3,v4,bw=194), (v3,v5,bw=170), (v3,v8,bw=171), (v3,v9,bw=141), (v3,v11,bw=174), (v3,v17,bw=187), (v3,v20,bw=166), (v3,v28,bw=107), (v3,v33,bw=140), (v4,v6,bw=132), (v4,v11,bw=121), (v4,v12,bw=103), (v4,v15,bw=145), (v4,v20,bw=200), (v4,v21,bw=130), (v4,v31,bw=168), (v4,v39,bw=193), (v4,v40,bw=168), (v4,v42,bw=144), (v5,v6,bw=104), (v5,v7,bw=188), (v5,v8,bw=160), (v5,v10,bw=166), (v5,v12,bw=182), (v5,v17,bw=165), (v5,v25,bw=134), (v5,v29,bw=130), (v5,v30,bw=116), (v5,v35,bw=186), (v5,v37,bw=112), (v5,v40,bw=120), (v5,v41,bw=105), (v5,v42,bw=100), (v5,v44,bw=139), (v5,v45,bw=189), (v6,v7,bw=189), (v6,v10,bw=197), (v6,v26,bw=174), (v6,v36,bw=195), (v6,v49,bw=182), (v7,v9,bw=158), (v7,v10,bw=107), (v7,v14,bw=154), (v7,v38,bw=154), (v7,v41,bw=115), (v7,v48,bw=115), (v8,v16,bw=110), (v8,v21,bw=186), (v8,v34,bw=128), (v8,v39,bw=164), (v9,v16,bw=199), (v9,v31,bw=111), (v9,v32,bw=116), (v9,v47,bw=194), (v9,v49,bw=133), (v10,v14,bw=171), (v10,v18,bw=183), (v10,v24,bw=122), (v10,v41,bw=191), (v11,v13,bw=185), (v11,v18,bw=116), (v11,v22,bw=127), (v11,v24,bw=186), (v11,v48,bw=107), (v12,v16,bw=108), (v12,v36,bw=123), (v13,v14,bw=119), (v13,v15,bw=191), (v13,v19,bw=108), (v13,v22,bw=105), (v13,v23,bw=172), (v13,v26,bw=170), (v13,v37,bw=128), (v14,v30,bw=175), (v15,v47,bw=181), (v16,v23,bw=164), (v16,v24,bw=107), (v16,v25,bw=188), (v16,v26,bw=129), (v16,v29,bw=153), (v17,v28,bw=173), (v18,v20,bw=118), (v18,v22,bw=184), (v22,v25,bw=191), (v22,v33,bw=142), (v22,v39,bw=161), (v22,v46,bw=188), (v24,v29,bw=128), (v24,v36,bw=186), (v25,v27,bw=107), (v25,v28,bw=142), (v25,v45,bw=105), (v26,v38,bw=109), (v26,v43,bw=192), (v27,v32,bw=200), (v30,v33,bw=135), (v30,v38,bw=194), (v31,v35,bw=119), (v31,v40,bw=139), (v33,v42,bw=186), (v38,v44,bw=191), (v38,v45,bw=176), (v38,v47,bw=136), (v40,v43,bw=150), (v42,v44,bw=105), (v43,v48,bw=178), (v45,v46,bw=122)\n\nVNF chain and demand:\nChain order: f1(CPU=28), f2(CPU=26), f3(CPU=11), f4(CPU=14), f5(CPU=28), f6(CPU=16), f7(CPU=22)\nSource node: v10\nDestination node: v47\nBandwidth demand: 59\n\nImportant: Each VNF must be placed on a distinct node. The path must go source -> node(f1) -> node(f2) -> ... -> destination. Respect all node CPU and link bandwidth capacities."
+  },
+  "raw_response": "{\"placement\": {\"f1\": \"v18\", \"f2\": \"v22\", \"f3\": \"v25\", \"f4\": \"v27\", \"f5\": \"v32\", \"f6\": \"v0\", \"f7\": \"v9\"}, \"path\": [[\"v10\", \"v18\"], [\"v18\", \"v22\"], [\"v22\", \"v25\"], [\"v25\", \"v27\"], [\"v27\", \"v32\"], [\"v32\", \"v0\"], [\"v0\", \"v9\"], [\"v9\", \"v47\"]]}",
+  "token_usage": {
+    "prompt_tokens": 2207,
+    "completion_tokens": 3972,
+    "total_tokens": 6179
+  },
+  "latency_seconds": 37.54
+}

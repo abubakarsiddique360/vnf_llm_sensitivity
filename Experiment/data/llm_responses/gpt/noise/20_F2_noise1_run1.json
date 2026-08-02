@@ -1,0 +1,22 @@
+{
+  "problem_id": 20,
+  "model": "gpt-5-mini",
+  "experiment": "noise",
+  "format": "F2",
+  "run": 1,
+  "temperature": 0.0,
+  "prompt_template": "A",
+  "noise_level": 1,
+  "timestamp": "2026-07-15T16:30:45",
+  "prompt": {
+    "system": "",
+    "user": "Node order: v0, v3, v2, v1, v4, v5, v6, v7, v8, v9, v30, v31, v32, v33, v34, v35\nAdjacency matrix (row=source, col=target, value=bandwidth):\n         v0     v3     v2     v1     v4     v5     v6     v7     v8     v9    v30    v31    v32    v33    v34    v35\n  v0      0    155      0    113      0    136    171      0    168    145    125      0    195      0    119    139\n  v3    155      0    101      0    127    129    173    192      0    161      0      0    105    136      0      0\n  v2      0    101      0    132    128    149    155      0      0      0    142      0    200      0    198      0\n  v1    113      0    132      0    165    130    182      0      0      0      0    115    181      0      0    100\n  v4      0    127    128    165      0      0      0      0    153      0      0      0    184      0      0      0\n  v5    136    129    149    130      0      0    158      0      0    141    118      0      0      0    149      0\n  v6    171    173    155    182      0    158      0    119      0      0      0      0      0      0    109      0\n  v7      0    192      0      0      0      0    119      0      0      0    128      0    147      0    166    199\n  v8    168      0      0      0    153      0      0      0      0    181      0      0    186    137      0      0\n  v9    145    161      0      0      0    141      0      0    181      0      0    200      0    158    187    119\n v30    125      0    142      0      0    118      0    128      0      0      0      0      0    178      0      0\n v31      0      0      0    115      0      0      0      0      0    200      0      0    149    114    152    122\n v32    195    105    200    181    184      0      0    147    186      0      0    149      0      0    127      0\n v33      0    136      0      0      0      0      0      0    137    158    178    114      0      0      0    150\n v34    119      0    198      0      0    149    109    166      0    187      0    152    127      0      0      0\n v35    139      0      0    100      0      0      0    199      0    119      0    122      0    150      0      0\n\nNode capacities: v0:50, v3:93, v2:77, v1:74, v4:50, v5:76, v6:98, v7:82, v8:51, v9:95, v30:54, v31:73, v32:90, v33:69, v34:82, v35:60\n\nVNF chain and demand:\nChain order: f1(CPU=18), f2(CPU=23), f3(CPU=12), f4(CPU=25)\nSource node: v8\nDestination node: v31\nBandwidth demand: 42\n\nImportant: Each VNF must be placed on a distinct node. The path must go source -> node(f1) -> node(f2) -> ... -> destination. Respect all node CPU and link bandwidth capacities."
+  },
+  "raw_response": "{\"placement\": {\"f1\": \"v32\", \"f2\": \"v2\", \"f3\": \"v34\", \"f4\": \"v31\"}, \"path\": [[\"source\", \"v32\"], [\"v32\", \"v2\"], [\"v2\", \"v34\"], [\"v34\", \"v31\"], [\"v31\", \"destination\"]]}\n\nReasoning:\n- Chosen nodes meet CPU requirements and are distinct:\n  - f1 (18) -> v32 (capacity 90)\n  - f2 (23) -> v2  (capacity 77)\n  - f3 (12) -> v34 (capacity 82)\n  - f4 (25) -> v31 (capacity 73)\n- Path edges and bandwidth (demand 42) checked:\n  - source (v8) -> v32: 186 >= 42\n  - v32 -> v2: 200 >= 42\n  - v2 -> v34: 198 >= 42\n  - v34 -> v31: 152 >= 42\n  - final v31 -> destination (same node) completes the chain\n- All VNFs placed on distinct nodes; link bandwidths and node CPU capacities respected.",
+  "token_usage": {
+    "prompt_tokens": 1372,
+    "completion_tokens": 2890,
+    "total_tokens": 4262
+  },
+  "latency_seconds": 28.28
+}

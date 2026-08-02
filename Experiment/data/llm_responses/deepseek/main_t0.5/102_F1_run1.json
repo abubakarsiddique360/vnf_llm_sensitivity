@@ -1,0 +1,22 @@
+{
+  "problem_id": 102,
+  "model": "deepseek-v4-flash",
+  "experiment": "main_t0.5",
+  "format": "F1",
+  "run": 1,
+  "temperature": 0.5,
+  "prompt_template": "A",
+  "noise_level": 0,
+  "timestamp": "2026-07-13T05:23:43",
+  "prompt": {
+    "system": "",
+    "user": "Nodes: v0(CPU=61), v1(CPU=65), v2(CPU=76), v3(CPU=71), v4(CPU=56), v5(CPU=70), v6(CPU=69), v7(CPU=61), v8(CPU=89), v9(CPU=53), v10(CPU=93), v11(CPU=52), v12(CPU=82), v13(CPU=84), v14(CPU=58), v15(CPU=96), v16(CPU=58), v17(CPU=66), v18(CPU=97), v19(CPU=78), v20(CPU=91), v21(CPU=77), v22(CPU=69), v23(CPU=92), v24(CPU=51), v25(CPU=71), v26(CPU=66), v27(CPU=81), v28(CPU=100), v29(CPU=91), v30(CPU=65)\nEdges (undirected): (v0,v1,bw=110), (v0,v2,bw=149), (v0,v3,bw=104), (v0,v4,bw=188), (v0,v5,bw=125), (v0,v8,bw=194), (v0,v10,bw=120), (v0,v11,bw=102), (v0,v13,bw=152), (v0,v15,bw=191), (v0,v27,bw=154), (v1,v4,bw=130), (v1,v17,bw=131), (v1,v20,bw=100), (v2,v4,bw=109), (v2,v5,bw=143), (v2,v6,bw=128), (v2,v7,bw=144), (v2,v10,bw=169), (v2,v13,bw=160), (v2,v14,bw=194), (v3,v9,bw=164), (v3,v16,bw=136), (v3,v19,bw=111), (v4,v5,bw=135), (v4,v6,bw=103), (v4,v7,bw=144), (v4,v10,bw=176), (v4,v14,bw=138), (v4,v16,bw=168), (v4,v17,bw=165), (v4,v20,bw=179), (v4,v22,bw=132), (v4,v30,bw=152), (v5,v6,bw=153), (v5,v7,bw=184), (v5,v8,bw=110), (v5,v9,bw=156), (v5,v11,bw=183), (v5,v12,bw=196), (v5,v13,bw=144), (v5,v23,bw=178), (v6,v8,bw=144), (v6,v9,bw=157), (v6,v18,bw=116), (v6,v19,bw=149), (v6,v26,bw=135), (v6,v29,bw=122), (v6,v30,bw=129), (v7,v12,bw=184), (v7,v14,bw=120), (v7,v18,bw=138), (v7,v21,bw=173), (v7,v28,bw=145), (v8,v16,bw=146), (v8,v22,bw=176), (v8,v23,bw=115), (v9,v25,bw=188), (v9,v29,bw=184), (v10,v11,bw=148), (v10,v23,bw=190), (v10,v24,bw=123), (v10,v25,bw=132), (v10,v27,bw=144), (v11,v12,bw=114), (v11,v19,bw=110), (v11,v20,bw=175), (v11,v21,bw=120), (v11,v27,bw=122), (v12,v22,bw=143), (v12,v25,bw=119), (v13,v15,bw=127), (v13,v18,bw=103), (v13,v28,bw=104), (v14,v15,bw=199), (v15,v17,bw=112), (v15,v26,bw=175), (v15,v30,bw=157), (v16,v21,bw=186), (v16,v24,bw=172), (v17,v28,bw=102), (v17,v29,bw=181), (v18,v26,bw=182), (v23,v24,bw=156)\n\nVNF chain and demand:\nChain order: f1(CPU=11), f2(CPU=27), f3(CPU=23), f4(CPU=21), f5(CPU=10), f6(CPU=18), f7(CPU=23), f8(CPU=16)\nSource node: v15\nDestination node: v25\nBandwidth demand: 78\n\nImportant: Each VNF must be placed on a distinct node. The path must go source -> node(f1) -> node(f2) -> ... -> destination. Respect all node CPU and link bandwidth capacities."
+  },
+  "raw_response": "{\"placement\": {\"f1\": \"v30\", \"f2\": \"v4\", \"f3\": \"v6\", \"f4\": \"v5\", \"f5\": \"v8\", \"f6\": \"v23\", \"f7\": \"v24\", \"f8\": \"v10\"}, \"path\": [[\"v15\", \"v30\"], [\"v30\", \"v4\"], [\"v4\", \"v6\"], [\"v6\", \"v5\"], [\"v5\", \"v8\"], [\"v8\", \"v23\"], [\"v23\", \"v24\"], [\"v24\", \"v10\"], [\"v10\", \"v25\"]]}",
+  "token_usage": {
+    "prompt_tokens": 1511,
+    "completion_tokens": 3994,
+    "total_tokens": 5505
+  },
+  "latency_seconds": 34.76
+}

@@ -1,0 +1,22 @@
+{
+  "problem_id": 74,
+  "model": "deepseek-v4-flash",
+  "experiment": "main_t0.5",
+  "format": "F1",
+  "run": 1,
+  "temperature": 0.5,
+  "prompt_template": "A",
+  "noise_level": 0,
+  "timestamp": "2026-07-13T04:28:06",
+  "prompt": {
+    "system": "",
+    "user": "Nodes: v0(CPU=96), v1(CPU=84), v2(CPU=57), v3(CPU=94), v4(CPU=87), v5(CPU=67), v6(CPU=73), v7(CPU=65), v8(CPU=60), v9(CPU=92), v10(CPU=89), v11(CPU=94), v12(CPU=86), v13(CPU=84), v14(CPU=53), v15(CPU=96), v16(CPU=90), v17(CPU=65), v18(CPU=82), v19(CPU=60), v20(CPU=80), v21(CPU=69), v22(CPU=51), v23(CPU=74), v24(CPU=74), v25(CPU=58), v26(CPU=64), v27(CPU=57), v28(CPU=74), v29(CPU=82), v30(CPU=89), v31(CPU=58), v32(CPU=86), v33(CPU=79), v34(CPU=63), v35(CPU=51), v36(CPU=76), v37(CPU=80)\nEdges (undirected): (v0,v5,bw=197), (v0,v30,bw=168), (v0,v36,bw=124), (v0,v10,bw=107), (v1,v7,bw=141), (v1,v11,bw=169), (v1,v16,bw=171), (v2,v37,bw=114), (v3,v5,bw=146), (v3,v22,bw=145), (v3,v34,bw=131), (v3,v37,bw=174), (v4,v20,bw=138), (v5,v12,bw=138), (v5,v25,bw=193), (v6,v34,bw=183), (v7,v36,bw=166), (v8,v10,bw=170), (v8,v9,bw=139), (v9,v15,bw=133), (v9,v29,bw=119), (v9,v13,bw=132), (v10,v20,bw=134), (v11,v23,bw=179), (v12,v37,bw=176), (v13,v14,bw=104), (v14,v17,bw=148), (v17,v18,bw=166), (v18,v21,bw=135), (v18,v19,bw=103), (v19,v24,bw=161), (v21,v27,bw=155), (v22,v34,bw=150), (v23,v33,bw=158), (v24,v26,bw=188), (v26,v28,bw=154), (v28,v35,bw=171), (v31,v32,bw=161), (v31,v34,bw=193)\n\nVNF chain and demand:\nChain order: f1(CPU=17), f2(CPU=13), f3(CPU=26), f4(CPU=21), f5(CPU=17), f6(CPU=22)\nSource node: v34\nDestination node: v10\nBandwidth demand: 75\n\nImportant: Each VNF must be placed on a distinct node. The path must go source -> node(f1) -> node(f2) -> ... -> destination. Respect all node CPU and link bandwidth capacities."
+  },
+  "raw_response": "{\"placement\": {\"f1\": \"v22\", \"f2\": \"v3\", \"f3\": \"v37\", \"f4\": \"v12\", \"f5\": \"v5\", \"f6\": \"v0\"}, \"path\": [[\"v34\", \"v22\"], [\"v22\", \"v3\"], [\"v3\", \"v37\"], [\"v37\", \"v12\"], [\"v12\", \"v5\"], [\"v5\", \"v0\"], [\"v0\", \"v10\"]]}",
+  "token_usage": {
+    "prompt_tokens": 1096,
+    "completion_tokens": 10863,
+    "total_tokens": 11959
+  },
+  "latency_seconds": 93.48
+}

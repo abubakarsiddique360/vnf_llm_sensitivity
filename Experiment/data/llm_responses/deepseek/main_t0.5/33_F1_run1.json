@@ -1,0 +1,22 @@
+{
+  "problem_id": 33,
+  "model": "deepseek-v4-flash",
+  "experiment": "main_t0.5",
+  "format": "F1",
+  "run": 1,
+  "temperature": 0.5,
+  "prompt_template": "A",
+  "noise_level": 0,
+  "timestamp": "2026-07-13T03:12:56",
+  "prompt": {
+    "system": "",
+    "user": "Nodes: v0(CPU=84), v1(CPU=73), v2(CPU=88), v3(CPU=77), v4(CPU=79), v5(CPU=91), v6(CPU=71), v7(CPU=66), v8(CPU=52), v9(CPU=76), v10(CPU=93), v11(CPU=76), v12(CPU=85), v13(CPU=96), v14(CPU=99), v15(CPU=72), v16(CPU=97), v17(CPU=94), v18(CPU=80), v19(CPU=63), v20(CPU=85), v21(CPU=74), v22(CPU=73), v23(CPU=73), v24(CPU=59), v25(CPU=60), v26(CPU=72), v27(CPU=96), v28(CPU=97), v29(CPU=72), v30(CPU=72), v31(CPU=81), v32(CPU=78), v33(CPU=53), v34(CPU=58), v35(CPU=98), v36(CPU=95)\nEdges (undirected): (v0,v1,bw=109), (v0,v2,bw=126), (v0,v3,bw=109), (v0,v4,bw=199), (v0,v6,bw=108), (v0,v14,bw=179), (v0,v17,bw=126), (v0,v22,bw=193), (v0,v36,bw=153), (v1,v4,bw=120), (v1,v5,bw=101), (v1,v11,bw=154), (v1,v23,bw=121), (v2,v4,bw=184), (v2,v6,bw=177), (v2,v11,bw=109), (v2,v12,bw=152), (v2,v13,bw=196), (v2,v26,bw=132), (v2,v30,bw=173), (v3,v5,bw=185), (v3,v6,bw=179), (v3,v7,bw=193), (v3,v8,bw=140), (v3,v9,bw=167), (v3,v12,bw=146), (v3,v13,bw=170), (v3,v14,bw=126), (v3,v20,bw=136), (v3,v24,bw=189), (v3,v26,bw=114), (v3,v28,bw=111), (v3,v33,bw=190), (v3,v36,bw=120), (v4,v5,bw=187), (v4,v8,bw=180), (v4,v10,bw=165), (v4,v15,bw=184), (v4,v16,bw=170), (v4,v17,bw=103), (v4,v19,bw=144), (v4,v20,bw=136), (v4,v29,bw=137), (v4,v31,bw=163), (v5,v7,bw=159), (v6,v7,bw=150), (v6,v8,bw=132), (v6,v9,bw=172), (v6,v10,bw=180), (v6,v15,bw=161), (v6,v16,bw=132), (v6,v18,bw=171), (v6,v21,bw=128), (v6,v28,bw=127), (v7,v10,bw=122), (v7,v23,bw=168), (v7,v25,bw=143), (v7,v36,bw=115), (v8,v9,bw=120), (v8,v19,bw=187), (v8,v23,bw=111), (v8,v30,bw=154), (v9,v13,bw=135), (v9,v17,bw=144), (v9,v28,bw=149), (v9,v31,bw=177), (v10,v11,bw=188), (v10,v18,bw=104), (v10,v20,bw=118), (v10,v27,bw=175), (v10,v32,bw=199), (v11,v12,bw=152), (v11,v14,bw=180), (v11,v15,bw=145), (v11,v16,bw=128), (v11,v33,bw=129), (v12,v24,bw=141), (v12,v32,bw=136), (v13,v21,bw=118), (v13,v24,bw=143), (v13,v25,bw=154), (v13,v26,bw=167), (v14,v18,bw=174), (v14,v22,bw=177), (v14,v29,bw=171), (v16,v32,bw=154), (v17,v19,bw=113), (v17,v21,bw=190), (v17,v27,bw=109), (v17,v29,bw=142), (v17,v33,bw=134), (v17,v34,bw=150), (v17,v35,bw=114), (v19,v25,bw=170), (v21,v22,bw=151), (v25,v27,bw=138), (v25,v34,bw=108), (v26,v35,bw=180), (v27,v34,bw=130), (v28,v30,bw=198), (v28,v35,bw=136), (v29,v31,bw=130)\n\nVNF chain and demand:\nChain order: f1(CPU=17), f2(CPU=29), f3(CPU=14), f4(CPU=23), f5(CPU=29)\nSource node: v6\nDestination node: v2\nBandwidth demand: 35\n\nImportant: Each VNF must be placed on a distinct node. The path must go source -> node(f1) -> node(f2) -> ... -> destination. Respect all node CPU and link bandwidth capacities."
+  },
+  "raw_response": "{\"placement\": {\"f1\": \"v10\", \"f2\": \"v18\", \"f3\": \"v14\", \"f4\": \"v22\", \"f5\": \"v0\"}, \"path\": [[\"v6\", \"v10\"], [\"v10\", \"v18\"], [\"v18\", \"v14\"], [\"v14\", \"v22\"], [\"v22\", \"v0\"], [\"v0\", \"v2\"]]}",
+  "token_usage": {
+    "prompt_tokens": 1712,
+    "completion_tokens": 5165,
+    "total_tokens": 6877
+  },
+  "latency_seconds": 44.72
+}

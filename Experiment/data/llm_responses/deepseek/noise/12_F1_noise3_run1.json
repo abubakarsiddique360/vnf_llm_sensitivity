@@ -1,0 +1,22 @@
+{
+  "problem_id": 12,
+  "model": "deepseek-v4-flash",
+  "experiment": "noise",
+  "format": "F1",
+  "run": 1,
+  "temperature": 0.0,
+  "prompt_template": "A",
+  "noise_level": 3,
+  "timestamp": "2026-07-13T09:03:40",
+  "prompt": {
+    "system": "",
+    "user": "Edges (undirected): (v0,v7,bw=169), (v0,v1,bw=194), (v1,v3,bw=169), (v1,v5,bw=105), (v1,v25,bw=112), (v1,v37,bw=141), (v1,v2,bw=160), (v2,v9,bw=178), (v3,v29,bw=150), (v4,v12,bw=194), (v4,v29,bw=177), (v6,v33,bw=102), (v8,v17,bw=107), (v8,v37,bw=142), (v9,v11,bw=197), (v10,v38,bw=112), (v11,v21,bw=137), (v12,v15,bw=101), (v12,v36,bw=159), (v13,v21,bw=189), (v14,v22,bw=169), (v14,v34,bw=107), (v16,v21,bw=105), (v16,v18,bw=198), (v17,v22,bw=108), (v18,v20,bw=106), (v19,v26,bw=115), (v20,v31,bw=179), (v20,v23,bw=195), (v22,v24,bw=158), (v22,v28,bw=189), (v22,v32,bw=196), (v22,v33,bw=124), (v23,v39,bw=107), (v24,v26,bw=108), (v25,v28,bw=179), (v26,v35,bw=125), (v26,v36,bw=134), (v27,v29,bw=108), (v29,v30,bw=101), (v30,v32,bw=184), (v32,v38,bw=130), (v39,v40,bw=120)\nEdges (undirected): (v0,v7,bw=169), (v0,v1,bw=194), (v1,v3,bw=169), (v1,v5,bw=105), (v1,v25,bw=112), (v1,v37,bw=141), (v1,v2,bw=160), (v2,v9,bw=178), (v3,v29,bw=150), (v4,v12,bw=194), (v4,v29,bw=177), (v6,v33,bw=102), (v8,v17,bw=107), (v8,v37,bw=142), (v9,v11,bw=197), (v10,v38,bw=112), (v11,v21,bw=137), (v12,v15,bw=101), (v12,v36,bw=159), (v13,v21,bw=189), (v14,v22,bw=169), (v14,v34,bw=107), (v16,v21,bw=105), (v16,v18,bw=198), (v17,v22,bw=108), (v18,v20,bw=106), (v19,v26,bw=115), (v20,v31,bw=179), (v20,v23,bw=195), (v22,v24,bw=158), (v22,v28,bw=189), (v22,v32,bw=196), (v22,v33,bw=124), (v23,v39,bw=107), (v24,v26,bw=108), (v25,v28,bw=179), (v26,v35,bw=125), (v26,v36,bw=134), (v27,v29,bw=108), (v29,v30,bw=101), (v30,v32,bw=184), (v32,v38,bw=130), (v39,v40,bw=120)\n\nVNF chain and demand:\nChain order: f1(CPU=19), f2(CPU=22), f3(CPU=27), f4(CPU=14)\nSource node: v8\nDestination node: v9\nBandwidth demand: 34\n\nImportant: Each VNF must be placed on a distinct node. The path must go source -> node(f1) -> node(f2) -> ... -> destination. Respect all node CPU and link bandwidth capacities."
+  },
+  "raw_response": "{\"placement\": {\"f1\": \"v17\", \"f2\": \"v22\", \"f3\": \"v28\", \"f4\": \"v25\"}, \"path\": [[\"source\", \"v17\"], [\"v17\", \"v22\"], [\"v22\", \"v28\"], [\"v28\", \"v25\"], [\"v25\", \"v1\"], [\"v1\", \"v2\"], [\"v2\", \"destination\"]]}",
+  "token_usage": {
+    "prompt_tokens": 1290,
+    "completion_tokens": 6030,
+    "total_tokens": 7320
+  },
+  "latency_seconds": 53.98
+}

@@ -1,0 +1,22 @@
+{
+  "problem_id": 94,
+  "model": "deepseek-v4-flash",
+  "experiment": "main_t0",
+  "format": "F4",
+  "run": 1,
+  "temperature": 0.0,
+  "prompt_template": "A",
+  "noise_level": 0,
+  "timestamp": "2026-07-12T21:01:13",
+  "prompt": {
+    "system": "",
+    "user": "{\n  \"nodes\": [\n    {\n      \"id\": \"v0\",\n      \"cpu_capacity\": 74\n    },\n    {\n      \"id\": \"v1\",\n      \"cpu_capacity\": 98\n    },\n    {\n      \"id\": \"v2\",\n      \"cpu_capacity\": 87\n    },\n    {\n      \"id\": \"v3\",\n      \"cpu_capacity\": 95\n    },\n    {\n      \"id\": \"v4\",\n      \"cpu_capacity\": 100\n    },\n    {\n      \"id\": \"v5\",\n      \"cpu_capacity\": 82\n    },\n    {\n      \"id\": \"v6\",\n      \"cpu_capacity\": 58\n    },\n    {\n      \"id\": \"v7\",\n      \"cpu_capacity\": 70\n    },\n    {\n      \"id\": \"v8\",\n      \"cpu_capacity\": 72\n    },\n    {\n      \"id\": \"v9\",\n      \"cpu_capacity\": 99\n    },\n    {\n      \"id\": \"v10\",\n      \"cpu_capacity\": 87\n    },\n    {\n      \"id\": \"v11\",\n      \"cpu_capacity\": 52\n    },\n    {\n      \"id\": \"v12\",\n      \"cpu_capacity\": 53\n    },\n    {\n      \"id\": \"v13\",\n      \"cpu_capacity\": 66\n    },\n    {\n      \"id\": \"v14\",\n      \"cpu_capacity\": 54\n    }\n  ],\n  \"edges\": [\n    {\n      \"source\": \"v0\",\n      \"target\": \"v1\",\n      \"bandwidth_capacity\": 184\n    },\n    {\n      \"source\": \"v1\",\n      \"target\": \"v3\",\n      \"bandwidth_capacity\": 136\n    },\n    {\n      \"source\": \"v1\",\n      \"target\": \"v5\",\n      \"bandwidth_capacity\": 195\n    },\n    {\n      \"source\": \"v1\",\n      \"target\": \"v2\",\n      \"bandwidth_capacity\": 158\n    },\n    {\n      \"source\": \"v2\",\n      \"target\": \"v4\",\n      \"bandwidth_capacity\": 141\n    },\n    {\n      \"source\": \"v4\",\n      \"target\": \"v6\",\n      \"bandwidth_capacity\": 165\n    },\n    {\n      \"source\": \"v6\",\n      \"target\": \"v7\",\n      \"bandwidth_capacity\": 174\n    },\n    {\n      \"source\": \"v7\",\n      \"target\": \"v8\",\n      \"bandwidth_capacity\": 109\n    },\n    {\n      \"source\": \"v8\",\n      \"target\": \"v9\",\n      \"bandwidth_capacity\": 198\n    },\n    {\n      \"source\": \"v9\",\n      \"target\": \"v10\",\n      \"bandwidth_capacity\": 107\n    },\n    {\n      \"source\": \"v10\",\n      \"target\": \"v11\",\n      \"bandwidth_capacity\": 123\n    },\n    {\n      \"source\": \"v11\",\n      \"target\": \"v12\",\n      \"bandwidth_capacity\": 166\n    },\n    {\n      \"source\": \"v12\",\n      \"target\": \"v13\",\n      \"bandwidth_capacity\": 149\n    },\n    {\n      \"source\": \"v13\",\n      \"target\": \"v14\",\n      \"bandwidth_capacity\": 181\n    }\n  ]\n}\n\nVNF chain and demand:\nChain order: f1(CPU=19), f2(CPU=15), f3(CPU=24), f4(CPU=19), f5(CPU=29), f6(CPU=23)\nSource node: v3\nDestination node: v6\nBandwidth demand: 27\n\nImportant: Each VNF must be placed on a distinct node. The path must go source -> node(f1) -> node(f2) -> ... -> destination. Respect all node CPU and link bandwidth capacities."
+  },
+  "raw_response": "{\"placement\": {\"f1\": \"v1\", \"f2\": \"v2\", \"f3\": \"v4\", \"f4\": \"v6\", \"f5\": \"v7\", \"f6\": \"v8\"}, \"path\": [[\"source\", \"v1\"], [\"v1\", \"v2\"], [\"v2\", \"v4\"], [\"v4\", \"v6\"], [\"v6\", \"v7\"], [\"v7\", \"v8\"], [\"v8\", \"v7\"], [\"v7\", \"destination\"]]}",
+  "token_usage": {
+    "prompt_tokens": 1183,
+    "completion_tokens": 8868,
+    "total_tokens": 10051
+  },
+  "latency_seconds": 95.93
+}

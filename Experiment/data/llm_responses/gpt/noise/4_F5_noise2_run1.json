@@ -1,0 +1,22 @@
+{
+  "problem_id": 4,
+  "model": "gpt-5-mini",
+  "experiment": "noise",
+  "format": "F5",
+  "run": 1,
+  "temperature": 0.0,
+  "prompt_template": "A",
+  "noise_level": 2,
+  "timestamp": "2026-07-15T15:10:01",
+  "prompt": {
+    "system": "",
+    "user": "v0 -> (v31,196), (v1,190), (v5,169), (v4,165), (v2,134), (v6,132), (v9,132), (v30,115), (v3,108)\nv3 -> (v7,175), (v10,136), (v5,134), (v0,108)\nv2 -> (v0,134), (v4,125)\nv1 -> (v33,200), (v0,190), (v34,190), (v7,180), (v10,168), (v6,103), (v4,102)\nv4 -> (v5,195), (v33,186), (v30,178), (v31,178), (v34,176), (v0,165), (v2,125), (v1,102)\nv5 -> (v4,195), (v7,170), (v0,169), (v6,136), (v3,134), (v9,133), (v10,130), (v33,129), (v30,128), (v32,125)\nv6 -> (v34,184), (v31,145), (v5,136), (v0,132), (v1,103)\nv7 -> (v1,180), (v3,175), (v5,170), (v32,155)\nv10 -> (v9,191), (v1,168), (v3,136), (v5,130)\nv9 -> (v10,191), (v5,133), (v0,132)\nv30 -> (v4,178), (v32,133), (v5,128), (v0,115)\nv31 -> (v0,196), (v4,178), (v6,145)\nv32 -> (v7,155), (v30,133), (v5,125)\nv33 -> (v1,200), (v4,186), (v5,129)\nv34 -> (v1,190), (v6,184), (v4,176)\nNode capacities: v0:86, v3:52, v2:82, v1:94, v4:86, v5:91, v6:95, v7:61, v10:60, v9:50, v30:92, v31:86, v32:94, v33:76, v34:62\n\nVNF chain and demand:\nChain order: f1(CPU=29), f2(CPU=18), f3(CPU=14), f4(CPU=25), f5(CPU=25), f6(CPU=15)\nSource node: v1\nDestination node: v9\nBandwidth demand: 54\n\nImportant: Each VNF must be placed on a distinct node. The path must go source -> node(f1) -> node(f2) -> ... -> destination. Respect all node CPU and link bandwidth capacities."
+  },
+  "raw_response": "{\"placement\": {\"f1\": \"v1\", \"f2\": \"v33\", \"f3\": \"v4\", \"f4\": \"v5\", \"f5\": \"v10\", \"f6\": \"v9\"}, \"path\": [[\"v1\", \"v33\"], [\"v33\", \"v4\"], [\"v4\", \"v5\"], [\"v5\", \"v10\"], [\"v10\", \"v9\"]]}\n\nReasoning:\n- Chain order maintained: source v1 -> f1(v1) -> f2(v33) -> f3(v4) -> f4(v5) -> f5(v10) -> f6(v9) -> destination v9.\n- CPU checks (node capacity >= VNF CPU):\n  - v1: 94 >= f1 29\n  - v33: 76 >= f2 18\n  - v4: 86 >= f3 14\n  - v5: 91 >= f4 25\n  - v10: 60 >= f5 25\n  - v9: 50 >= f6 15\n- Bandwidth checks (each traversed link capacity >= demand 54):\n  - v1\u2013v33: 200 >= 54\n  - v33\u2013v4: 186 >= 54\n  - v4\u2013v5: 195 >= 54\n  - v5\u2013v10: 130 >= 54\n  - v10\u2013v9: 191 >= 54\n- All VNFs are on distinct nodes and all node/link capacity constraints are satisfied.",
+  "token_usage": {
+    "prompt_tokens": 915,
+    "completion_tokens": 1627,
+    "total_tokens": 2542
+  },
+  "latency_seconds": 22.03
+}

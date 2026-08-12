@@ -10,7 +10,7 @@ for mod in list(sys.modules.keys()):
 
 from src.utils import load_problems, build_user_prompt, save_json
 
-API_KEY = "sk-2d0412766ddf4f96af7779804bc4e0f3"
+API_KEY = "sk-your-deepseek-api-key-here"
 BASE_URL = "https://api.deepseek.com"
 
 SYSTEM_PROMPT = "You are a VNF placement solver.\n\nINCORRECT (do NOT output like this):\n```json\n{\"placement\": {\"f1\": \"v4\"}, \"path\": [\"source\", \"v4\"]}\n```\n\nCORRECT (output ONLY this format, no markdown, no code fences):\n{\"placement\": {\"f1\": \"v4\", \"f2\": \"v5\", \"f3\": \"v8\"}, \"path\": [[\"source\", \"v4\"], [\"v4\", \"v5\"], [\"v5\", \"v8\"], [\"v8\", \"destination\"]]}\n\nRules:\n- Output ONLY the raw JSON object. No ```json markers, no explanation before or after.\n- 'placement' maps each VNF id to a node id.\n- 'path' is a list of [node1, node2] pairs.\n- Path visits VNFs in chain order from source to destination.\n- Each VNF on a distinct node.\n- Respect CPU and bandwidth capacities."

@@ -16,7 +16,8 @@ structurally different ways:
 
 We query two LLM families (**GPT-5-mini** and **DeepSeek-V4-Flash**) across
 150 problem instances (3,500 queries in total), and compare their outputs against
-ILP-optimal solutions (PuLP/CBC) and against greedy/random placement baselines.
+an ILP-based placement-then-route baseline (PuLP/CBC) and against greedy/random
+placement baselines.
 
 > Key finding: format choice alone shifts feasibility by **17.5 percentage points**
 > for one model while the other remains nearly stable. In network automation,
@@ -34,7 +35,7 @@ VNF_LLM_SENSITIVITY/
     ├── requirements.txt        # Python dependencies
     ├── .env.example            # template for API keys/config (copy to .env)
     ├── .gitignore
-    ├── src/                    # main pipeline scripts (01–07, noise_injection, utils)
+    ├── src/                    # main pipeline scripts (01–08, noise_injection, utils)
     ├── baselines/              # greedy heuristic and random placement
     ├── prompts/                # F1–F5 prompt templates (template_a / template_b)
     ├── data/
@@ -82,6 +83,7 @@ The scripts in `src/` run in order:
 | 5    | `05_parse_responses.py`                                            | Parse raw LLM responses into tables                                |
 | 6    | `06_compute_metrics.py`                                            | Feasibility rate, optimality gap, format sensitivity               |
 | 7    | `07_statistics_frequentist.py`, `07b_statistics_bayesian.py`     | Statistical analysis                                               |
+| 8    | `08_review_statistics.py`                                        | Reproduce revised-manuscript stats (Wilson CIs, paired McNemar tests, prompt-token counts) |
 | –   | `noise_injection.py`                                               | Noise-robustness experiments                                       |
 | –   | `baselines/greedy_heuristic.py`, `baselines/random_placement.py` | Traditional baselines                                              |
 | –   | `visualization/`                                                   | Generate paper figures                                             |
@@ -89,8 +91,8 @@ The scripts in `src/` run in order:
 ## Metrics
 
 - **Feasibility rate** — percentage of valid (capacity-respecting) deployments.
-- **Optimality gap** — relative deviation from the ILP-optimal cost (negative = underestimation).
-- **Format sensitivity** — mean per-problem standard deviation of optimality gaps across the five formats.
+- **Cost gap** — relative deviation of a feasible answer's cost from the placement-then-route baseline (a comparator, not a joint optimum; a negative value means an edge-reusing integrated route is cheaper than the decomposed baseline).
+- **Format sensitivity** — mean per-problem standard deviation of the cost gap across the five formats.
 
 ## Citation
 

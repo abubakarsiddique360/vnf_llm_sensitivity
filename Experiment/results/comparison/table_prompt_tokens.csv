@@ -1,0 +1,13 @@
+model,format,mean_prompt_tokens,median_prompt_tokens,n
+deepseek,F1,1489,1117,120
+deepseek,F2,2658,2295,120
+deepseek,F3,2313,1654,120
+deepseek,F4,3599,2507,120
+deepseek,F5,1683,1239,120
+deepseek,ALL,2349,1739,600
+gpt,F1,1416,1044,120
+gpt,F2,3477,2952,120
+gpt,F3,2241,1582,120
+gpt,F4,3413,2357,120
+gpt,F5,1611,1167,120
+gpt,ALL,2432,1714,600
